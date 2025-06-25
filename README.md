@@ -30,27 +30,23 @@ Takım 24
 
 # Sprint 1
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**:
+
+- **Puan tamamlama mantığı**: 
 
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+- **Daily Scrum**: 
+
+- **Sprint board update**: 
 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
-
-- **Sprint board update**: Sprint board screenshotları: 
-
-
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: 
 
 - **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlanmış, arduino kurulumu ve firebase'e bağlanması sağlanmış, uygulama için veritabanı olarak firebase servisleri aktif edilmiş ve eksiklikler değerlendirilmiştir. Sprint Review katılımcıları: Mustafa Aksoy
+
 
 - **Sprint Retrospective:**
-  - Roller ile ilgili düzenleme yapılmış, scrum master değişmiştir.
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
-  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
- 
+  
 
 
 ---
@@ -63,22 +59,21 @@ Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlan
 
 # Sprint 2
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır:
+- **Daily Scrum**: 
 
-- **Sprint board update**: Sprint board screenshotları: 
+- **Sprint board update**: 
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: 
 
 - **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
-Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
+
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+
 
 
 ---
@@ -91,23 +86,20 @@ Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydo
 
 # Sprint 3
 
-- **Sprint içinde tamamlanması tahmin edilen puan**: İkinci sprintten kalan 120 puanın da eklenmesiyle bu sprint için toplam puan: 240'tır.
+- **Sprint içinde tamamlanması tahmin edilen puan**:
 
 
-- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: 
-- **Sprint board update**: Sprint board screenshotları: 
+- **Daily Scrum**:
+- **Sprint board update**:
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: 
  
 
 - **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve tamamlanamayan sayfa, algoritma ve servis bağlantıları değerlendirilmiştir. 
-Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin gelecek projelerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
 
 
 ---
