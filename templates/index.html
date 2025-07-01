@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemini Anlatım Sistemi</title>
+</head>
+<body>
+    <h1>Konuyu Kişiselleştirilmiş Şekilde Açıklat</h1>
+    <form method="POST">
+        <label>Konu:</label>
+        <input type="text" name="konu" required><br><br>
+
+        <label>Öğrenme Stili:</label>
+        <select name="tarz">
+            <option value="görsel">Hikayeleştirme</option>
+            <option value="işitsel">Uzman</option>
+            <option value="kinestetik">Basit</option>
+        </select><br><br>
+
+        <button type="submit">Anlatımı Al</button>
+    </form>
+
+    {% if cevap %}
+        <h2>Gemini'den Gelen Anlatım:</h2>
+        <p>{{ cevap }}</p>
+    {% endif %}
+</body>
+</html>
