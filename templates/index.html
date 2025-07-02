@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Gemini Anlatım Sistemi</title>
+  <meta charset="UTF-8">
+  <title>Gemini Anlatım Sistemi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Konuyu Kişiselleştirilmiş Şekilde Açıklat</h1>
-    <form method="POST">
-        <label>Konu:</label>
-        <input type="text" name="konu" required><br><br>
+<body class="bg-light">
 
-        <label>Öğrenme Stili:</label>
-        <select name="tarz">
-            <option value="görsel">Hikayeleştirme</option>
-            <option value="işitsel">Uzman</option>
-            <option value="kinestetik">Basit</option>
-        </select><br><br>
+  <div class="container mt-5">
+    <h1 class="mb-4 text-center">Konuyu Kişiselleştirilmiş Şekilde Açıklat</h1>
 
-        <button type="submit">Anlatımı Al</button>
+    <form method="POST" class="mb-5">
+      <div class="mb-3">
+        <label for="konu" class="form-label">Konu:</label>
+        <input type="text" name="konu" id="konu" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="tarz" class="form-label">Öğrenme Stili:</label>
+        <select name="tarz" id="tarz" class="form-select">
+          <option value="hikayeleştirme">hikayeleştirme</option>
+          <option value="uzman">uzman</option>
+          <option value="basit">basit</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Anlatımı Al</button>
     </form>
 
     {% if cevap %}
-        <h2>Gemini'den Gelen Anlatım:</h2>
-        <p>{{ cevap }}</p>
+      <div class="card">
+        <div class="card-header">
+          <strong>Gemini'den Gelen Anlatım:</strong>
+        </div>
+        <div class="card-body">
+          <p class="card-text" style="white-space: pre-wrap;">{{ cevap }}</p>
+        </div>
+      </div>
     {% endif %}
+  </div>
+
 </body>
 </html>
