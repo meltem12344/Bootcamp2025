@@ -68,7 +68,7 @@
 
 
 
----
+
   ## Product Description
   This project is an AI-powered educational platform that offers personalized subject explanations based on students' learning styles (visual, auditory, kinesthetic) and personality traits. Using student profiles, the GPT-based system generates dynamic content and provides features such as voice-based feedback, mini quizzes, mental fatigue analysis, and personalized PDF booklets. The goal is to enhance learning efficiency through tailored instruction and reduce educational inequality.
 
@@ -119,7 +119,7 @@
     <p>The target audience of this platform includes students from middle school to university level who seek a more personalized and engaging learning experience beyond traditional, standardized education methods. It is especially designed for learners with diverse cognitive styles—visual, auditory, and kinesthetic—as well as for individuals with learning difficulties such as dyslexia or attention disorders. Additionally, private tutors, educational institutions, and parents aiming to provide adaptive support to students form an important user base. By offering inclusive, AI-powered, and style-based content generation, the platform also appeals to global users who value accessibility, customization, and effective digital learning tools.</p>
   </details>
 
-  --- 
+--- 
 
   <details>
     <summary><h1>Sprint 1</h1></summary>
