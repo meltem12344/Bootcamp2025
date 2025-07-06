@@ -188,7 +188,7 @@
 - **Daily Scrum**:
   <details>
     <ul>
-      <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+      <a href="./bootcampFiles/sprintOne/dailyScrum">See file</a></li>
     </ul>
   </details>
 
