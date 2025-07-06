@@ -209,12 +209,12 @@
   - PDF booklet generation structure is defined for future sprint implementation.  
 
 ---
-## Sprint Review Participants
+- **Sprint Review Participants:**
 
 - **Meltem Orhan** – Scrum Master & Developer   
 - **Selcan Ünal** – Developer  
 - **Beyzanur Eker** – Developer
-- 
+
 - **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
@@ -225,7 +225,6 @@
 
   </details>
 
- 
   
   </body>
   </html>
