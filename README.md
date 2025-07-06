@@ -197,8 +197,24 @@
   </details>
 
 - **Product Backlog URL:** 
-- **Sprint Review:**
-- **Sprint Review Participants:** 
+- **Sprint Review:** In Sprint 1, our team successfully delivered a MVP of the AI-powered educational platform. During the sprint review session, we demonstrated the following key accomplishments:
+
+  - Functional user input form capturing learning style and name.  
+  - Dynamic explanation generation via Gemini API based on user profile.  
+  - Real-time session handling and data passing between pages.  
+  - Database integration using SQLite and SQLAlchemy.  
+  - Responsive design using Bootstrap 5.  
+  - User interaction logging and mental fatigue detection logic setup.  
+  - Secure API key management via `.env` and `dotenv`.  
+  - PDF booklet generation structure is defined for future sprint implementation.  
+
+---
+## Sprint Review Participants
+
+- **Meltem Orhan** – Scrum Master & Developer   
+- **Selcan Ünal** – Developer  
+- **Beyzanur Eker** – Developer
+- 
 - **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
