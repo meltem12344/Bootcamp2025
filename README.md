@@ -185,11 +185,17 @@
 
   > A total of '200 points' worth of work has been completed.  
   > All planned tasks have been finalized and the MVP is functionally complete.
-  - **Daily Scrum**:
-  - **Product Backlog URL:** 
-  - **Sprint Review:**
-  - **Sprint Review Participants:** 
-  - **Other Notes**:
+- **Daily Scrum**:
+  <details>
+    <ul>
+      <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+    </ul>
+  </details>
+
+- **Product Backlog URL:** 
+- **Sprint Review:**
+- **Sprint Review Participants:** 
+- **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
     <ul>
