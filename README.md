@@ -34,7 +34,6 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/yusuffenes" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/arda-demirel-9020b8233/" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
@@ -43,7 +42,6 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/selcanu" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/dila-hazal-bilgin-5123b1258" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
@@ -52,7 +50,6 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/1beyza" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/merve-ağaçayak-551293238/" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
@@ -61,7 +58,6 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/onuralklyc" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
-        <a href="https://www.linkedin.com/in/onur-konuk/" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
   </table>
