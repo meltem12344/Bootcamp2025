@@ -34,6 +34,7 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/yusuffenes" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/yusufenesbudak/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
@@ -58,6 +59,7 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/onuralklyc" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/onuralklyc/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
   </table>
