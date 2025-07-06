@@ -187,8 +187,9 @@
   > All planned tasks have been finalized and the MVP is functionally complete.
 - **Daily Scrum**:
   <details>
+    <summary><h3>File</h3></summary>
     <ul>
-      <a href="./bootcampFiles/sprintOne/dailyScrum">See file</a></li>
+      <li> <a href="./bootcampFiles/sprintOne/dailyScrum">See file</a></li>
     </ul>
   </details>
 
