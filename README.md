@@ -64,15 +64,6 @@
         <a href="https://www.linkedin.com/in/onur-konuk/" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    <tr>
-    <td><img src="bootcampFiles/general/squarepics/appicon.png" width="50" height="50" /></td>
-    <td>zaten</td>
-    <td>Startup</td>
-    <td>
-      <a href="https://www.linkedin.com/company/zatenapp" target="_blank"><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
-      <a href="https://www.instagram.com/zaten.app/" target="_blank"><img src="bootcampFiles/general/social/instagram.png" width="20" height="20" /></a>
-    </td> 
-  </tr>
   </table>
 
 
