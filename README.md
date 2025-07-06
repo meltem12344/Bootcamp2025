@@ -231,6 +231,8 @@
   - **Backend Altyapısı:**  
     Veri kaydı, analiz ve kullanıcı etkileşimlerinin izlenebilmesi için temel sunucu tarafı sistemleri planlanacak ve yapılandırılacak.
     
+  - **Ürün İsmi ve Logo Tasarımı:**
+     Ürün ismi ve logo belirlenecek.
 - **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
