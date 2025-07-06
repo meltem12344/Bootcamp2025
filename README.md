@@ -43,6 +43,7 @@
       <td>Developer</td>
       <td>
         <a href="https://github.com/selcanu" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/selcanunal/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
