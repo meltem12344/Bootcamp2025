@@ -68,7 +68,7 @@
 
 
 
-
+---
   ## Product Description
   This project is an AI-powered educational platform that offers personalized subject explanations based on students' learning styles (visual, auditory, kinesthetic) and personality traits. Using student profiles, the GPT-based system generates dynamic content and provides features such as voice-based feedback, mini quizzes, mental fatigue analysis, and personalized PDF booklets. The goal is to enhance learning efficiency through tailored instruction and reduce educational inequality.
 
@@ -150,7 +150,7 @@
     <img src="bootcampFiles/sprintOne/boardupdate/4.png" style="max-width: 100%; height: auto;">
     <img src="bootcampFiles/sprintOne/boardupdate/5.png" style="max-width: 100%; height: auto;">
   </details>
-
+---
   - **Sprint Notes**:
     - It has been decided to use 'Flask' for the web framework.
       
@@ -173,7 +173,8 @@
     - All user inputs and AI responses are logged to the database for future reference.
       
     - The project uses `.env` and `dotenv` for secure API key handling.
-- **Expected Point Completion within Sprint**: 200 points  
+- **Expected Point Completion within Sprint**: 200 points
+---
 - **Point Completion Logic**:  
   The first sprint had a target of '200 points'.  
 
@@ -188,6 +189,7 @@
 
   > A total of '200 points' worth of work has been completed.  
   > All planned tasks have been finalized and the MVP is functionally complete.
+---
 - **Daily Scrum**:
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
@@ -196,7 +198,8 @@
     </ul>
   </details>
 
-- **Product Backlog URL:** 
+- **Product Backlog URL:**
+- ---
 - **Sprint Review:** In Sprint 1, our team successfully delivered a MVP of the AI-powered educational platform. During the sprint review session, we demonstrated the following key accomplishments:
 
   - Functional user input form capturing learning style and name.  
@@ -211,10 +214,10 @@
 ---
 - **Sprint Review Participants:**
 
-- **Meltem Orhan** – Scrum Master & Developer   
-- **Selcan Ünal** – Developer  
-- **Beyzanur Eker** – Developer
-
+  - **Meltem Orhan** – Scrum Master & Developer   
+  - **Selcan Ünal** – Developer  
+  - **Beyzanur Eker** – Developer
+---
 - **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
