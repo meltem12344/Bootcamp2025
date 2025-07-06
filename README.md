@@ -196,7 +196,6 @@
     </ul>
   </details>
 
-- **Product Backlog URL:**
 
 - **Sprint Review:** In Sprint 1, our team successfully delivered a MVP of the AI-powered educational platform. During the sprint review session, we demonstrated the following key accomplishments:
 
@@ -214,8 +213,24 @@
 
   - **Meltem Orhan** – Scrum Master & Developer   
   - **Selcan Ünal** – Developer  
-  - **Beyzanur Eker** – Developer
 
+- **Sprint Retrospective:**
+
+  - **Web Arayüzü Geliştirme:**  
+    Giriş, kayıt ve dashboard gibi temel sayfaların ilk sürümleri oluşturulacak ve etkileşimli hale getirilecek.
+  
+  - **Sesli Anlatım Geri Bildirim Sistemi:**  
+    Öğrenci anlatımı sonrası doğru ve eksik anlatım kısımlarını otomatik olarak tespit edip vurgulayan bir geri bildirim mekanizması geliştirilecek.
+  
+  - **Zihinsel Yorgunluk Karar Mekanizması:**  
+    Yazım şekli ve tepki süresine göre ne zaman mola önerileceğini belirleyen sistematik yapı tamamlanacak.
+  
+  - **Kayıt Ekranı:**  
+    Tasarımı tamamlanarak işlevsel hale getirilecek.
+  
+  - **Backend Altyapısı:**  
+    Veri kaydı, analiz ve kullanıcı etkileşimlerinin izlenebilmesi için temel sunucu tarafı sistemleri planlanacak ve yapılandırılacak.
+    
 - **Other Notes**:
   <details>
     <summary><h3>Additional Files</h3></summary>
