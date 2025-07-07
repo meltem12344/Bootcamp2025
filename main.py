@@ -11,11 +11,11 @@ import config
 
 app = FastAPI()
 
-client = genai.Client(api_key=config.GEMINI_API_KEY)
+client = genai.Client(api_key=config.GEMINI_API_KEY) # https://ai.google.dev/gemini-api/docs/quickstart?hl=tr 
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="templates") # html dosyalarını yüklemek için
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static") # js ve css dosyalarını yüklemek için
 
 async def transcribe_audio(file: UploadFile): # verdiğin ses dosyasını metne çeviren fonksiyon
     temp_dir = None
@@ -29,6 +29,7 @@ async def transcribe_audio(file: UploadFile): # verdiğin ses dosyasını metne 
 
         audio_file = client.files.upload(file=file_path)
         
+        # https://ai.google.dev/gemini-api/docs/audio?hl=tr dan bakabilirsiniz direkt oradan aldım 
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=['Bu ses dosyasını metne çevir. Sadece çevrilen metni döndür, başka bir şey ekleme.', audio_file]

@@ -16,7 +16,8 @@ client = genai.Client(api_key=config.GEMINI_API_KEY)
 chat_history = []
 initial_context = ""
 
-def set_initial_context(preferences):
+
+def set_initial_context(preferences): # burada kullanıcının tercihlerini alıyoruz ve bunları sistem mesajına ekliyoruz.
     global initial_context
     context_parts = ["Sen bir eğitim asistanısın."]
     for key, value in preferences.items():
@@ -29,13 +30,15 @@ def set_initial_context(preferences):
     chat_history.clear()
     chat_history.append(SystemMessage(content=initial_context))
 
-def get_response(question):
+# https://python.langchain.com/docs/tutorials/llm_chain/
+def get_response(question): #temel chatbot işlevi
     chat_history.append(HumanMessage(content=question))
     response = llm.invoke(chat_history)
     chat_history.append(AIMessage(content=response.content))
     return response.content
 
-def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
+# Linkini verdiğim örnektede aynısı yapılmış ses dosyası işlenmeden önce o yüzden burada da aynısını yapıyorum.
+def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2): # https://ai.google.dev/gemini-api/docs/speech-generation?hl=tr
    with wave.open(filename, "wb") as wf:
       wf.setnchannels(channels)
       wf.setsampwidth(sample_width)
@@ -43,9 +46,11 @@ def wave_file(filename, pcm, channels=1, rate=24000, sample_width=2):
       wf.writeframes(pcm)
 
 def synthesize_speech(text):
-    """Metni sese dönüştürür ve ses verisini bir iterator olarak döndürür."""
+    """Burada linkini veridğim örnekteki ifadenin aynısını yapıyorum.
+    """
     try:
         # Google'ın TTS API'sini kullanarak sesi oluştur
+        # https://ai.google.dev/gemini-api/docs/speech-generation?hl=tr dan bakabilirsiniz direkt oradan aldım 
         response = client.models.generate_content(
             model=config.TTS_MODEL_NAME,
             contents=text,
@@ -60,7 +65,7 @@ def synthesize_speech(text):
                 ),
             )
         )
-        
+        # yanlış yapıda donerse diye kontrol yapıyoruz
         if (response.candidates and 
             response.candidates[0].content and 
             response.candidates[0].content.parts and 
@@ -79,8 +84,10 @@ def synthesize_speech(text):
         print(f"Error details: {str(e)}")
         return None
 
-
+# Metine dönüştürülmüş kullanıcının konu anlatımını alıyoruz ve bizim yazdığımız promptun sonuna ekliyoruz ve llm gönderiyoruz.
+# metine dönüştürme işlemi transcribe_audio fonksiyonu ile yapılıyor.
 def find_mistakes(text):
+    
     try:
         prompt = (
             "Kullanıcı bir konuyu açıklamaya çalıştı. Lütfen aşağıdaki metni analiz edin, "
@@ -88,10 +95,10 @@ def find_mistakes(text):
             "Kullanıcıya öğretici bir şekilde geri bildirimde bulunun. Hataları açıkça belirtin "
             "ve doğru açıklamayı detaylı bir şekilde yapın. Markdown formatında yanıt verin.\n\n"
             f"Kullanıcının açıklaması:\n{text}"
-        )
+        ) 
         
         response = llm.invoke(prompt)
-        return response.content
+        return response.content 
     except Exception as e:
         print(f"Error during mistake analysis: {e}")
         return "Konu analizi sırasında bir hata oluştu. Lütfen tekrar deneyin."
