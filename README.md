@@ -338,7 +338,6 @@
      - Example corrections and detailed AI explanations were provided after user voice input
 
 - **Expected Point Completion within Sprint**: 240 points
-
 - **Point Completion Logic**:  
   The second sprint had a target of '240 points'.  
 
@@ -355,7 +354,6 @@
     - Agentic AI Plan: Agent flow integration planning (10 pts)
 
   > A total of '240 points' worth of work has been completed.  
-
 - **Daily Scrum**:
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
@@ -363,8 +361,6 @@
       <li> <a href="./bootcampFiles/sprintTwo/dailyScrum">See file</a></li>
     </ul>
   </details>
-
-
 - **Sprint Review:** In Sprint 2, our team expanded the functionality and interface of the AI-powered educational platform. We focused on creating a more complete and interactive learning experience. During the sprint review, we demonstrated the following key accomplishments:
   
 Fully designed login, registration, and password validation screens.
@@ -377,7 +373,6 @@ Voice-based explanation interface where the AI gives corrections and feedback.
 Early version of the fatigue prediction module was reviewed.
 Agentic AI flow was planned to enhance personalization in future sprints.
 All UI designs were delivered through Figma and visual assets (PNG/JPEG) with feedback.
-
 - **Sprint Retrospective:**
 
   
