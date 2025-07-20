@@ -278,25 +278,25 @@
       <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/23.png" style="max-width: 100%; height: auto;"></td>
       <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/28.png" style="max-width: 100%; height: auto;"></td>
       <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/29.png" style="max-width: 100%; height: auto;"></td>
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/30.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/31.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/32.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/33.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/34.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/35.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/36.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/37.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/38.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/39.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/40.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/30.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/31.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/32.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/33.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/34.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/35.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/36.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/37.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/38.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/39.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/40.png" style="max-width: 100%; height: auto;"></td>   
     <tr>
       <td colspan="4" style="text-align: center;"><h2>User Login</h2></td>
     </tr>
     <tr>
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/24.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/25.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/26.png" style="max-width: 100%; height: auto;"></td>   
-      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/27.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/24.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/25.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/26.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/27.png" style="max-width: 100%; height: auto;"></td>   
      </tr>   
   </table>
   </details>   
