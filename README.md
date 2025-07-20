@@ -252,12 +252,9 @@
 
 
 
-
-
   <details>
-    <summary><h1>Sprint 1</h1></summary>
-  <details>
-  
+    <summary><h1>Sprint 2</h1></summary>
+
 
   <details>
     <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
