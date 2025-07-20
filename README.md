@@ -243,6 +243,160 @@
 
   </details>
 
+
+
+
+
+
+
+
+
+
+
+
+  <details>
+    <summary><h1>Sprint 2</h1></summary>
+
+
+  <details>
+    <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/17.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/18.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/19.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/20.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/21.png" style="max-width: 100%; height: auto;"></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Style of Web pages</h2></td>
+    </tr>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/22.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/23.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/28.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/29.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/30.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/31.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/32.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/33.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/34.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/35.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/36.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/37.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/38.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/39.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/40.png" style="max-width: 100%; height: auto;"></td>   
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>User Login</h2></td>
+    </tr>
+    <tr>
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/24.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/25.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/26.png" style="max-width: 100%; height: auto;"></td>   
+      <td style="width: 25%;"><img src="bootcampFiles/sprinTwo/screenshots/27.png" style="max-width: 100%; height: auto;"></td>   
+     </tr>   
+  </table>
+  </details>   
+
+
+  <details>
+    <summary><h3>Sprint 2 - Sprint Board Update Screenshots</h3></summary>
+    <img src="bootcampFiles/sprintTwo/boardupdate/1.png" style="max-width: 100%; height: auto;">
+    <img src="bootcampFiles/sprintTwo/boardupdate/2.png" style="max-width: 100%; height: auto;">
+    <img src="bootcampFiles/sprintTwo/boardupdate/3.png" style="max-width: 100%; height: auto;">
+  </details>
+
+  - **Sprint Notes**:
+    - It has been decided to use 'Flask' for the web framework.
+      
+    - It has been decided to use 'Gemini API' for personalized content generation.
+      
+    - It has been decided to use 'SQLite' as the local database, integrated with `SQLAlchemy`.
+      
+    - The 'project structure' has been initialized with a separate `models.py` and `templates/` folder.
+     
+    - A user input form has been created to collect:
+      - `name`
+      - 6 learning style-related questions.
+        
+    - It has been decided to use 'Bootstrap 5' for responsive UI styling.
+      
+    - User profile data is stored in a `Flask session` and passed to the next page.
+      
+    - A second page allows entering a topic and fetches an AI-generated explanation based on the user's learning style.
+      
+    - All user inputs and AI responses are logged to the database for future reference.
+      
+    - The project uses `.env` and `dotenv` for secure API key handling.
+- **Expected Point Completion within Sprint**: 200 points
+
+- **Point Completion Logic**:  
+  The first sprint had a target of '200 points'.  
+
+  The core focus was:
+- Setting up the Flask project (40 pts)
+- Designing the user form page (30 pts)
+- Implementing the database schema (30 pts)
+- Integrating the Gemini API (40 pts)
+- Creating the explanation (output) page (30 pts)
+- Calculating learning style & managing session data (20 pts)
+- UI/UX polishing, routing improvements, and testing (10 pts)
+
+  > A total of '200 points' worth of work has been completed.  
+  > All planned tasks have been finalized and the MVP is functionally complete.
+
+- **Daily Scrum**:
+  <details>
+    <summary><h2>Daily Scrum File</h2></summary>
+    <ul>
+      <li> <a href="./bootcampFiles/sprinTwo/dailyScrum">See file</a></li>
+    </ul>
+  </details>
+
+
+- **Sprint Review:** In Sprint 1, our team successfully delivered a MVP of the AI-powered educational platform. During the sprint review session, we demonstrated the following key accomplishments:
+
+  - Functional user input form capturing learning style and name.  
+  - Dynamic explanation generation via Gemini API based on user profile.  
+  - Real-time session handling and data passing between pages.  
+  - Database integration using SQLite and SQLAlchemy.  
+  - Responsive design using Bootstrap 5.  
+  - User interaction logging and mental fatigue detection logic setup.  
+  - Secure API key management via `.env` and `dotenv`.  
+  - PDF booklet generation structure is defined for future sprint implementation.  
+
+
+- **Sprint Review Participants:**
+
+  - **Meltem Orhan** – Scrum Master & Developer   
+  - **Selcan Ünal** – Developer  
+
+- **Sprint Retrospective:**
+
+  - **Web Arayüzü Geliştirme:**  
+    Giriş, kayıt ve dashboard gibi temel sayfaların ilk sürümleri oluşturulacak ve etkileşimli hale getirilecek.
   
+  - **Sesli Anlatım Geri Bildirim Sistemi:**  
+    Öğrenci anlatımı sonrası doğru ve eksik anlatım kısımlarını otomatik olarak tespit edip vurgulayan bir geri bildirim mekanizması geliştirilecek.
+  
+  - **Zihinsel Yorgunluk Karar Mekanizması:**  
+    Yazım şekli ve tepki süresine göre ne zaman mola önerileceğini belirleyen sistematik yapı tamamlanacak.
+  
+  - **Kayıt Ekranı:**  
+    Tasarımı tamamlanarak işlevsel hale getirilecek.
+  
+  - **Backend Altyapısı:**  
+    Veri kaydı, analiz ve kullanıcı etkileşimlerinin izlenebilmesi için temel sunucu tarafı sistemleri planlanacak ve yapılandırılacak.
+    
+  - **Ürün İsmi ve Logo Tasarımı:**
+     Ürün ismi ve logo belirlenecek.
+
+
+
+
+
   </body>
   </html>
