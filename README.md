@@ -363,19 +363,44 @@
   </details>
 - **Sprint Review:** In Sprint 2, our team expanded the functionality and interface of the AI-powered educational platform. We focused on creating a more complete and interactive learning experience. During the sprint review, we demonstrated the following key accomplishments:
   
-Fully designed login, registration, and password validation screens.
-A working dashboard showing time spent, weekly activity, and course progress.
-Quiz interface with a 20-question format and clean navigation.
-Learning style test initiation page integrated into the user flow.
-Interactive chat page with text and voice input options.
-Integration of Gemini API to generate personalized topic explanations.
-Voice-based explanation interface where the AI gives corrections and feedback.
-Early version of the fatigue prediction module was reviewed.
-Agentic AI flow was planned to enhance personalization in future sprints.
-All UI designs were delivered through Figma and visual assets (PNG/JPEG) with feedback.
+    Fully designed login, registration, and password validation screens.
+    A working dashboard showing time spent, weekly activity, and course progress.
+    Quiz interface with a 20-question format and clean navigation.
+    Learning style test initiation page integrated into the user flow.
+    Interactive chat page with text and voice input options.
+    Integration of Gemini API to generate personalized topic explanations.
+    Voice-based explanation interface where the AI gives corrections and feedback.
+    Early version of the fatigue prediction module was reviewed.
+    Agentic AI flow was planned to enhance personalization in future sprints.
+    All UI designs were delivered through Figma and visual assets (PNG/JPEG) with feedback.
+
+- **Sprint Retrospective Participants:**
+
+  - **Meltem Orhan** – Scrum Master & Developer   
+  - **Selcan Ünal** – Developer  
+  - **Yusuf Enes Budak** – Developer
+  - **Beyzanur Eker** – Developer
+  - **Onural Osman Kalaycı** – Developer
+    
 - **Sprint Retrospective:**
 
+  - **PDF Report Generation System:**  
+    A mechanism will be developed to generate PDF reports based on user content.
+    Dynamic integration of titles, content, and user information will be implemented.
   
+  - **Visual Output Feature:**  
+    A system will be created to export user-generated content or quiz results as visual outputs (JPEG/PNG).
+    Design adjustments and resolution settings will also be handled.
+    
+  - **Data Flow System:**  
+    A personalized content flow will be designed based on user preferences, learning styles, and quiz performance.
+    This system will be integrated as a microservice or modular structure.
+    
+  - **Reward System (to increase platform engagement)**  
+    A reward system including badges, points, levels, or achievement notifications will be designed to enhance user engagement.
+    Motivational UI elements will also be planned as part of this feature.
+
+
 
   </body>
   </html>
