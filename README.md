@@ -394,6 +394,56 @@
   - **Ürün İsmi ve Logo Tasarımı:**
      Ürün ismi ve logo belirlenecek.
 
+<details>
+  <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/17.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/18.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/19.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/20.png" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>Style of Web pages</h2></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/22.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/23.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/28.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/29.png" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/30.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/31.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/32.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/33.png" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/34.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/35.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/36.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/37.png" style="width:100%"></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/38.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/39.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/40.png" style="width:100%"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align: center;"><h2>User Login</h2></td>
+    </tr>
+    <tr>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/24.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/25.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/26.png" style="width:100%"></td>
+      <td><img src="bootcampFiles/sprintTwo/screenshots/27.png" style="width:100%"></td>
+    </tr>
+  </table>
+</details>
 
 
 
