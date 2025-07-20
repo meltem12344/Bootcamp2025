@@ -322,91 +322,65 @@
   </details>
 
   - **Sprint Notes**:
-    - It has been decided to use 'Flask' for the web framework.
-      
-    - It has been decided to use 'Gemini API' for personalized content generation.
-      
-    - It has been decided to use 'SQLite' as the local database, integrated with `SQLAlchemy`.
-      
-    - The 'project structure' has been initialized with a separate `models.py` and `templates/` folder.
-     
-    - A user input form has been created to collect:
-      - `name`
-      - 6 learning style-related questions.
-        
-    - It has been decided to use 'Bootstrap 5' for responsive UI styling.
-      
-    - User profile data is stored in a `Flask session` and passed to the next page.
-      
-    - A second page allows entering a topic and fetches an AI-generated explanation based on the user's learning style.
-      
-    - All user inputs and AI responses are logged to the database for future reference.
-      
-    - The project uses `.env` and `dotenv` for secure API key handling.
-- **Expected Point Completion within Sprint**: 200 points
+    UI / UX Improvements
+    
+     - Login, registration, verification, and password validation screens
+     - Dashboard showing weekly performance, activity tracking, and course list
+     - Quiz interface
+     - Start screen for the learning style test
+     - Chatbot area and voice evaluation screen
+     - Designs delivered via Figma with PNG/JPEG files and written feedback
+    AI Integration
+
+     - Chat-style response area prototype was created
+     - Voice explanation → evaluation → error display flow was designed
+     - Content generation logic using Gemini or Agentic AI was planned
+     - Example corrections and detailed AI explanations were provided after user voice input
+
+- **Expected Point Completion within Sprint**: 240 points
 
 - **Point Completion Logic**:  
-  The first sprint had a target of '200 points'.  
+  The second sprint had a target of '240 points'.  
 
   The core focus was:
-- Setting up the Flask project (40 pts)
-- Designing the user form page (30 pts)
-- Implementing the database schema (30 pts)
-- Integrating the Gemini API (40 pts)
-- Creating the explanation (output) page (30 pts)
-- Calculating learning style & managing session data (20 pts)
-- UI/UX polishing, routing improvements, and testing (10 pts)
+    - Login & Registration Screens: User login, Google sign-in, password check (20 pts)
+    - Learning Test Start Page: Start button and welcome screen (10 pts)
+    - Dashboard Page: Activity, time spent, and summary view (20 pts)
+    - Quiz Interface: 20-question quiz and navigation (20 pts)
+    - Chat Page: Text/voice input and response area (20 pts)
+    - UI/UX Enhancements: Simple and learner-friendly design (10 pts)
+    - Topic Explanation + AI: Gemini-based custom explanation (25 pts)
+    - Voice Explanation + Feedback: AI correction after voice input (25 pts)
+    - Fatigue Prediction (Start): Initial fatigue logic setup (10 pts)
+    - Agentic AI Plan: Agent flow integration planning (10 pts)
 
-  > A total of '200 points' worth of work has been completed.  
-  > All planned tasks have been finalized and the MVP is functionally complete.
+  > A total of '240 points' worth of work has been completed.  
 
 - **Daily Scrum**:
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
     <ul>
-      <li> <a href="./bootcampFiles/sprintTwo/dailyScrum">See file</a></li>
+      <li> <a href="./bootcampFiles/sprinTwo/dailyScrum">See file</a></li>
     </ul>
   </details>
 
 
-- **Sprint Review:** In Sprint 1, our team successfully delivered a MVP of the AI-powered educational platform. During the sprint review session, we demonstrated the following key accomplishments:
-
-  - Functional user input form capturing learning style and name.  
-  - Dynamic explanation generation via Gemini API based on user profile.  
-  - Real-time session handling and data passing between pages.  
-  - Database integration using SQLite and SQLAlchemy.  
-  - Responsive design using Bootstrap 5.  
-  - User interaction logging and mental fatigue detection logic setup.  
-  - Secure API key management via `.env` and `dotenv`.  
-  - PDF booklet generation structure is defined for future sprint implementation.  
-
-
-- **Sprint Review Participants:**
-
-  - **Meltem Orhan** – Scrum Master & Developer   
-  - **Selcan Ünal** – Developer  
+- **Sprint Review:** In Sprint 2, our team expanded the functionality and interface of the AI-powered educational platform. We focused on creating a more complete and interactive learning experience. During the sprint review, we demonstrated the following key accomplishments:
+  
+Fully designed login, registration, and password validation screens.
+A working dashboard showing time spent, weekly activity, and course progress.
+Quiz interface with a 20-question format and clean navigation.
+Learning style test initiation page integrated into the user flow.
+Interactive chat page with text and voice input options.
+Integration of Gemini API to generate personalized topic explanations.
+Voice-based explanation interface where the AI gives corrections and feedback.
+Early version of the fatigue prediction module was reviewed.
+Agentic AI flow was planned to enhance personalization in future sprints.
+All UI designs were delivered through Figma and visual assets (PNG/JPEG) with feedback.
 
 - **Sprint Retrospective:**
 
-  - **Web Arayüzü Geliştirme:**  
-    Giriş, kayıt ve dashboard gibi temel sayfaların ilk sürümleri oluşturulacak ve etkileşimli hale getirilecek.
   
-  - **Sesli Anlatım Geri Bildirim Sistemi:**  
-    Öğrenci anlatımı sonrası doğru ve eksik anlatım kısımlarını otomatik olarak tespit edip vurgulayan bir geri bildirim mekanizması geliştirilecek.
-  
-  - **Zihinsel Yorgunluk Karar Mekanizması:**  
-    Yazım şekli ve tepki süresine göre ne zaman mola önerileceğini belirleyen sistematik yapı tamamlanacak.
-  
-  - **Kayıt Ekranı:**  
-    Tasarımı tamamlanarak işlevsel hale getirilecek.
-  
-  - **Backend Altyapısı:**  
-    Veri kaydı, analiz ve kullanıcı etkileşimlerinin izlenebilmesi için temel sunucu tarafı sistemleri planlanacak ve yapılandırılacak.
-    
-  - **Ürün İsmi ve Logo Tasarımı:**
-     Ürün ismi ve logo belirlenecek.
-
-
 
   </body>
   </html>
