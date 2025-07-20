@@ -254,63 +254,67 @@
 
 
 
+  <details>
+    <summary><h1>Sprint 1</h1></summary>
+  <details>
+  
 
-<details>
-  <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
-  <table style="width: 100%;">
-    <tr>
-      <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
-    </tr>
-    <tr>
-      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/17.jpeg" style="max-width: 100%; height: auto;"></td> 
-      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/18.jpeg" style="max-width: 100%; height: auto;"></td>
-      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/19.jpeg" style="max-width: 100%; height: auto;"></td>
-      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/20.jpeg" style="max-width: 100%; height: auto;"></td>
-    </tr>
-    <tr>
-      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/21.jpeg" style="max-width: 100%; height: auto;"></td> 
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4" style="text-align: center;"><h2>Style of Web pages</h2></td>
-    </tr>
-    <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/22.jpeg" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/23.jpeg" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/28.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/29.png" style="width:100%"></td>
-    </tr>
-    <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/30.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/31.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/32.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/33.png" style="width:100%"></td>
-    </tr>
-    <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/34.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/35.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/36.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/37.png" style="width:100%"></td>
-    </tr>
-    <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/38.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/39.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/40.png" style="width:100%"></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td colspan="4" style="text-align: center;"><h2>User Login</h2></td>
-    </tr>
-    <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/24.jpeg" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/25.jpeg" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/26.jpeg" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/27.jpeg" style="width:100%"></td>
-    </tr>
-  </table>
-</details>
+  <details>
+    <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
+    <table style="width: 100%;">
+      <tr>
+        <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
+      </tr>
+      <tr>
+        <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/17.jpeg" style="max-width: 100%; height: auto;"></td> 
+        <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/18.jpeg" style="max-width: 100%; height: auto;"></td>
+        <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/19.jpeg" style="max-width: 100%; height: auto;"></td>
+        <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/20.jpeg" style="max-width: 100%; height: auto;"></td>
+      </tr>
+      <tr>
+        <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/21.jpeg" style="max-width: 100%; height: auto;"></td> 
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;"><h2>Style of Web pages</h2></td>
+      </tr>
+      <tr>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/22.jpeg" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/23.jpeg" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/28.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/29.png" style="width:100%"></td>
+      </tr>
+      <tr>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/30.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/31.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/32.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/33.png" style="width:100%"></td>
+      </tr>
+      <tr>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/34.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/35.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/36.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/37.png" style="width:100%"></td>
+      </tr>
+      <tr>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/38.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/39.png" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/40.png" style="width:100%"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center;"><h2>User Login</h2></td>
+      </tr>
+      <tr>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/24.jpeg" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/25.jpeg" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/26.jpeg" style="width:100%"></td>
+        <td><img src="bootcampFiles/sprintTwo/screenshots/27.jpeg" style="width:100%"></td>
+      </tr>
+    </table>
+  </details>
 
 
   <details>
