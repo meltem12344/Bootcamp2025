@@ -360,7 +360,7 @@
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
     <ul>
-      <li> <a href="./bootcampFiles/sprinTwo/dailyScrum">See file</a></li>
+      <li> <a href="./bootcampFiles/sprintTwo/dailyScrum">See file</a></li>
     </ul>
   </details>
 
