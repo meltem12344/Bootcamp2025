@@ -401,10 +401,10 @@
       <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
     </tr>
     <tr>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/17.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/18.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/19.png" style="width:100%"></td>
-      <td><img src="bootcampFiles/sprintTwo/screenshots/20.png" style="width:100%"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/17.png" style="max-width: 100%; height: auto;"></td> 
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/18.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/19.png" style="max-width: 100%; height: auto;"></td>
+      <td style="width: 25%;"><img src="bootcampFiles/sprintTwo/screenshots/20.png" style="max-width: 100%; height: auto;"></td>
     </tr>
     <tr>
       <td colspan="4" style="text-align: center;"><h2>Style of Web pages</h2></td>
