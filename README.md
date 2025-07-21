@@ -48,10 +48,11 @@
     </tr>
     <tr>
       <td><img src="bootcampFiles/general/squarepics/beyzanur.png" width="50" height="50" /></td>
-      <td>Beyzanur Eker</td>
+      <td>Beyzanur Dağdelen</td>
       <td>Developer</td>
       <td>
         <a href="https://github.com/1beyza" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://www.linkedin.com/in/beyzanurdagdelen/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
     <tr>
