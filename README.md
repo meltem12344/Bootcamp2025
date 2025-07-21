@@ -379,7 +379,7 @@
   - **Meltem Orhan** – Scrum Master & Developer   
   - **Selcan Ünal** – Developer  
   - **Yusuf Enes Budak** – Developer
-  - **Beyzanur Eker** – Developer
+  - **Beyzanur Dağdelen** – Developer
   - **Onural Osman Kalaycı** – Developer
     
 - **Sprint Retrospective:**
