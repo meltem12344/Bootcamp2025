@@ -1,5 +1,12 @@
 ### login register sayfasını şu anda ana sayfada ekli değil oraya ulaşmak için adresin sonuna /login yazabilirsiniz arka planda çalışıyor ama arayüze eklemedim henüz.
 
+
+## Yapılanlar 
+
+### - Mini quiz eklendi
+### - Database ile bağlantılar eklendi (daha eklenecek)
+### - Kullanıcı sistemi eklendi
+
 ## Kurulum
 1 - git kuruluysa bu şekilde yükelyebilirsiniz cmd'den (yüklü değilse direkt dosya olarak indirebilirsiniz) 
 ```bash
