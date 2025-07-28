@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Eğitim Platformu</title>
+    
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h2>AI Eğitim Platformu</h2>
+            <div class="loading-spinner"></div>
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="text-center mb-5">
+            <div class="header-content">
+                <!-- İstatistik Butonu - Sağ Üst -->
+                <div class="stats-button-container">
+                    <button id="show-stats-btn" class="stats-btn" style="display: none;" title="Kullanım İstatistiklerim">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>İstatistiklerim</span>
+                    </button>
+                </div>
+
+                <div class="logo-container">
+                    <i class="fas fa-brain logo-icon"></i>
+                </div>
+                <h1 class="main-title">AI Eğitim Platformu</h1>
+                <p class="subtitle">Kişiselleştirilmiş Öğrenme Deneyimi</p>
+            </div>
+        </header>
+
+        <!-- Survey Container -->
+        <div id="survey-container" class="survey-container">
+            <div class="survey-header">
+                <div class="survey-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h2>Öğrenme Tercihlerinizi Belirleyelim</h2>
+                <p>Size en uygun öğrenme stilini belirlemek için birkaç soru soralım.</p>
+            </div>
+
+            <form id="preferences-form" class="preferences-form">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <div class="question-number">1</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-eye"></i>
+                            Bir konuyu öğrenirken nasıl bir anlatım tercih edersiniz?
+                        </label>
+                        <select class="form-select" name="anlatim-stili">
+                            <option value="görsel materyallerle desteklenmiş">
+                                <i class="fas fa-chart-bar"></i> Görsel materyallerle (şemalar, grafikler)
+                            </option>
+                            <option value="gerçek hayattan örneklerle somutlaştırılmış">
+                                <i class="fas fa-lightbulb"></i> Gerçek hayattan örneklerle
+                            </option>
+                            <option value="adım adım ve mantıksal bir sıra ile">
+                                <i class="fas fa-list-ol"></i> Adım adım, mantıksal bir sıra ile
+                            </option>
+                            <option value="hikayeleştirilmiş ve ilgi çekici bir dille">
+                                <i class="fas fa-book-open"></i> Hikayeleştirilmiş ve ilgi çekici
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <div class="question-number">2</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-language"></i>
+                            Teknik bir terimle karşılaştığınızda ne istersiniz?
+                        </label>
+                        <select class="form-select" name="teknik-terim-aciklamasi">
+                            <option value="basit bir analoji veya metafor ile açıklanmasını">
+                                Basit bir benzetme ile açıklansın
+                            </option>
+                            <option value="terimin kökeni ve tarihçesi hakkında bilgi verilmesini">
+                                Kökeni ve tarihçesi anlatılsın
+                            </option>
+                            <option value="sadece tanımının yapılmasını">
+                                Sadece tanımı yapılsın
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <div class="question-number">3</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Öğrenme hızınız nasıldır?
+                        </label>
+                        <select class="form-select" name="ogrenme-hizi">
+                            <option value="hızlı ve özet odaklı">Hızlı ve özet odaklı</option>
+                            <option value="sindire sindire ve detaylı">Sindire sindire ve detaylı</option>
+                            <option value="konuya göre değişir">Konuya göre değişir</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <div class="question-number">4</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-comments"></i>
+                            Ne tür geri bildirimler sizi motive eder?
+                        </label>
+                        <select class="form-select" name="geri-bildirim-turu">
+                            <option value="cesaretlendirici ve pozitif">Cesaretlendirici ve pozitif</option>
+                            <option value="doğrudan ve yapıcı eleştirel">Doğrudan ve yapıcı eleştirel</option>
+                            <option value="ilerlememi gösteren somut veriler">İlerlememi gösteren veriler</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <div class="question-number">5</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-bullseye"></i>
+                            Bir konunun hangi yönüne daha çok odaklanılmasını istersiniz?
+                        </label>
+                        <select class="form-select" name="odak-noktasi">
+                            <option value="pratik uygulamalarına ve kullanım alanlarına">Pratik uygulamalarına</option>
+                            <option value="arkasındaki teoriye ve temel prensiplere">Teorik altyapısına</option>
+                            <option value="tarihsel gelişimine ve felsefesine">Tarihsel gelişimine</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <div class="question-number">6</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-user-graduate"></i>
+                            Eğitim seviyeniz nedir?
+                        </label>
+                        <select class="form-select" name="egitim-seviyesi">
+                            <option value="lise öğrencisi">Lise</option>
+                            <option value="üniversite öğrencisi">Üniversite</option>
+                            <option value="yüksek lisans/doktora">Yüksek Lisans/Doktora</option>
+                            <option value="profesyonel/sektör çalışanı">Profesyonel</option>
+                            <option value="meraklı bir başlangıç seviyesi">Meraklı (Başlangıç)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <div class="question-number">7</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-volume-up"></i>
+                            Açıklamaların genel tonu nasıl olmalı?
+                        </label>
+                        <select class="form-select" name="anlatim-tonu">
+                            <option value="samimi ve arkadaşça">Samimi ve arkadaşça</option>
+                            <option value="resmi ve akademik">Resmi ve akademik</option>
+                            <option value="enerjik ve motive edici">Enerjik ve motive edici</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <div class="question-number">8</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-puzzle-piece"></i>
+                            Bir problem çözerken nasıl bir yol izlenmesini istersiniz?
+                        </label>
+                        <select class="form-select" name="problem-cozme-yaklasimi">
+                            <option value="farklı çözüm yollarının da gösterilmesini">Farklı çözüm yolları da gösterilsin</option>
+                            <option value="en etkili ve doğrudan çözümün verilmesini">En etkili çözüm verilsin</option>
+                            <option value="cevabı vermeden önce ipuçları verilmesini">Önce ipuçları verilsin</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <div class="question-number">9</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-smile"></i>
+                            Öğrenme materyallerinde mizah olmalı mı?
+                        </label>
+                        <select class="form-select" name="mizah-kullanimi">
+                            <option value="evet, yerinde ve zekice espriler öğrenmeyi kolaylaştırır">Evet, yerinde espriler olabilir</option>
+                            <option value="hayır, tamamen ciddi ve odaklanmış bir içerik olmalı">Hayır, ciddi olmalı</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <div class="question-number">10</div>
+                    <div class="question-content">
+                        <label class="form-label">
+                            <i class="fas fa-list-check"></i>
+                            Konu sonlarında ne tür bir özet istersiniz?
+                        </label>
+                        <select class="form-select" name="ozet-tercihi">
+                            <option value="anahtar noktaları içeren madde imli bir liste">Madde imli özet</option>
+                            <option value="kısa bir paragraf şeklinde genel bir tekrar">Paragraf şeklinde özet</option>
+                            <option value="öğrendiklerimi test edecek bir veya iki soru">Test sorusu</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="submit-section">
+                    <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                        <i class="fas fa-rocket"></i>
+                        <span>Öğrenmeye Başla</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Chat Container -->
+        <div id="chat-container" class="chat-container">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-button active" data-tab="soru-sor">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Soru Sor</span>
+                </button>
+                <button class="tab-button" data-tab="sesli-degerlendirme">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Sesli Değerlendirme</span>
+                </button>
+                <button class="tab-button" data-tab="mini-quiz">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Mini Quiz</span>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Soru Sor Tab -->
+                <div id="soru-sor-tab" class="tab-pane active">
+                    <div class="chat-header">
+                        <div class="chat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="chat-title-area">
+                            <h2>AI Asistan ile Sohbet</h2>
+                            <p>Sorularınızı yazın veya sesli olarak sorun</p>
+                        </div>
+                        <div class="chat-stats-area">
+                            <button id="refresh-stats-btn" class="refresh-stats-btn" title="İstatistikleri Yenile">
+                                <i class="fas fa-sync-alt"></i>
+                                <span>Yenile</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input Section -->
+                    <div class="input-section">
+                        <div class="input-group">
+                            <label for="question-input" class="form-label">
+                                <i class="fas fa-question-circle"></i>
+                                Sorunuzu buraya yazın:
+                            </label>
+                            <textarea 
+                                id="question-input" 
+                                class="form-control question-textarea" 
+                                rows="4"
+                                placeholder="Merak ettiğiniz konuyu buraya yazın..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <div class="text-actions">
+                                <button id="send-text" class="btn btn-success">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Metin Gönder</span>
+                                </button>
+                            </div>
+                            
+                            <div class="audio-actions">
+                                <button id="start-record" class="btn btn-info">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Kaydı Başlat</span>
+                                </button>
+                                <button id="stop-record" class="btn btn-danger" disabled>
+                                    <i class="fas fa-stop"></i>
+                                    <span>Kaydı Durdur</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Audio Playback -->
+                        <div id="audio-playback-container" class="audio-playback-container">
+                            <label class="form-label">
+                                <i class="fas fa-headphones"></i>
+                                Kaydınız:
+                            </label>
+                            <audio id="audio-player" controls class="audio-player"></audio>
+                            <button id="send-audio" class="btn btn-primary">
+                                <i class="fas fa-upload"></i>
+                                <span>Sesli Soruyu Gönder</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Response Section -->
+                    <div class="response-section">
+                        <div class="response-header">
+                            <h3>
+                                <i class="fas fa-brain"></i>
+                                AI Yanıtı
+                            </h3>
+                        </div>
+                        
+                        <div id="response-area" class="response-area">
+                            <div class="empty-state">
+                                <i class="fas fa-comments"></i>
+                                <p>Henüz bir soru sormadınız. Yukarıdaki alanı kullanarak sorunuzu yazın veya sesli olarak sorun.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="response-actions">
+                            <button id="listen-response" class="btn btn-secondary" disabled>
+                                <i class="fas fa-volume-up"></i>
+                                <span>Sesli Dinle</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Custom Audio Player for Response -->
+                    <div id="response-audio-player-container" class="custom-audio-player-container" style="display: none;">
+                        <div class="audio-player-header">
+                            <div class="audio-player-icon">
+                                <i class="fas fa-volume-up"></i>
+                            </div>
+                            <div class="audio-player-info">
+                                <h3>AI Yanıtı</h3>
+                                <p>AI'ın sesli yanıtını dinleyin</p>
+                            </div>
+                        </div>
+                        
+                        <div class="custom-audio-player">
+                            <div class="audio-controls">
+                                <button id="response-play-pause" class="audio-control-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="response-stop" class="audio-control-btn">
+                                    <i class="fas fa-stop"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="audio-progress-container">
+                                <div class="audio-progress-bar">
+                                    <div id="response-progress-fill" class="audio-progress-fill"></div>
+                                </div>
+                                <div class="audio-time-display">
+                                    <span id="response-current-time">00:00</span>
+                                    <span>/</span>
+                                    <span id="response-duration">00:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="audio-volume-container">
+                                <button id="response-mute" class="volume-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <div class="volume-slider-container">
+                                    <input type="range" id="response-volume" class="volume-slider" min="0" max="100" value="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sesli Değerlendirme Tab -->
+                <div id="sesli-degerlendirme-tab" class="tab-pane">
+                    <div class="chat-header">
+                        <div class="chat-icon">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h2>Sesli Konu Değerlendirme</h2>
+                        <p>Bir konuyu sesli olarak anlatın, AI sizi değerlendirsin ve hatalarınızı düzeltsin</p>
+                    </div>
+
+                    <!-- Custom Audio Player Section -->
+                    <div id="evaluation-audio-playback-container" class="custom-audio-player-container" style="display: none;">
+                        <div class="audio-player-header">
+                            <div class="audio-player-icon">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <div class="audio-player-info">
+                                <h3>Kaydınız</h3>
+                                <p>Anlatımınızı dinleyin ve değerlendirmeyi başlatın</p>
+                            </div>
+                        </div>
+                        
+                        <div class="custom-audio-player">
+                            <div class="audio-controls">
+                                <button id="evaluation-play-pause" class="audio-control-btn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button id="evaluation-stop" class="audio-control-btn">
+                                    <i class="fas fa-stop"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="audio-progress-container">
+                                <div class="audio-progress-bar">
+                                    <div id="evaluation-progress-fill" class="audio-progress-fill"></div>
+                                </div>
+                                <div class="audio-time-display">
+                                    <span id="evaluation-current-time">00:00</span>
+                                    <span>/</span>
+                                    <span id="evaluation-duration">00:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="audio-volume-container">
+                                <button id="evaluation-mute" class="volume-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <div class="volume-slider-container">
+                                    <input type="range" id="evaluation-volume" class="volume-slider" min="0" max="100" value="100">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="audio-actions">
+                            <button id="send-evaluation-audio" class="btn btn-primary btn-lg">
+                                <i class="fas fa-upload"></i>
+                                <span>Değerlendirmeyi Başlat</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recording Instructions -->
+                    <div class="recording-instructions">
+                        <div class="instruction-card">
+                            <div class="instruction-icon">
+                                <i class="fas fa-microphone-alt"></i>
+                            </div>
+                            <div class="instruction-content">
+                                <h3>Konu Anlatımınızı Kaydedin</h3>
+                                <p>Herhangi bir konuyu sesli olarak anlatın. AI sisteminiz anlatımınızı değerlendirecek ve hatalarınızı düzeltecektir.</p>
+                                <ul class="instruction-steps">
+                                    <li><i class="fas fa-check"></i> Aşağıdaki "Kaydı Başlat" butonuna tıklayın</li>
+                                    <li><i class="fas fa-check"></i> Konunuzu net ve anlaşılır şekilde anlatın</li>
+                                    <li><i class="fas fa-check"></i> "Kaydı Durdur" butonuna tıklayarak kaydı bitirin</li>
+                                    <li><i class="fas fa-check"></i> Kaydınızı dinleyin ve "Değerlendirmeyi Başlat" ile AI'dan geri bildirim alın</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recording Section -->
+                    <div class="recording-section">
+                        <div class="input-group">
+                            <label class="form-label">
+                                <i class="fas fa-microphone"></i>
+                                Konu anlatımınızı kaydedin:
+                            </label>
+                            <div class="recording-controls">
+                                <button id="start-evaluation-record" class="btn btn-info btn-lg">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Kaydı Başlat</span>
+                                </button>
+                                <button id="stop-evaluation-record" class="btn btn-danger btn-lg" disabled>
+                                    <i class="fas fa-stop"></i>
+                                    <span>Kaydı Durdur</span>
+                                </button>
+                            </div>
+                            <div id="evaluation-recording-timer" class="recording-timer" style="display: none;">
+                                <i class="fas fa-clock"></i>
+                                <span id="evaluation-timer-display">00:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evaluation Response Section -->
+                    <div class="evaluation-response-section">
+                        <div class="response-header">
+                            <h3>
+                                <i class="fas fa-clipboard-check"></i>
+                                Değerlendirme Sonucu
+                            </h3>
+                        </div>
+                        
+                        <div id="evaluation-response-area" class="response-area">
+                            <div class="empty-state">
+                                <i class="fas fa-microphone-alt"></i>
+                                <p>Henüz bir kayıt yapmadınız. Yukarıdaki butonları kullanarak konu anlatımınızı kaydedin ve değerlendirin.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="response-actions">
+                            <button id="listen-evaluation-response" class="btn btn-secondary" disabled>
+                                <i class="fas fa-volume-up"></i>
+                                <span>Sesli Dinle</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Quiz Tab -->
+                <div id="mini-quiz-tab" class="tab-pane">
+                    <div class="chat-header">
+                        <div class="chat-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h2>Mini Quiz</h2>
+                        <p>Bilginizi test edin ve öğrenin</p>
+                    </div>
+
+                    <!-- Quiz Setup Section -->
+                    <div id="quiz-setup" class="quiz-setup-section">
+                        <div class="setup-card">
+                            <div class="setup-header">
+                                <i class="fas fa-cog"></i>
+                                <h3>Quiz Ayarları</h3>
+                                <p>Konunuzu, zorluk seviyenizi ve soru sayınızı seçin</p>
+                            </div>
+                            
+                            <div class="setup-content">
+                                <!-- Topic Selection -->
+                                <div class="topic-selection-group">
+                                    <label class="setup-label">
+                                        <i class="fas fa-book"></i>
+                                        Quiz Konusu
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="quiz-topic-input" 
+                                        class="topic-input" 
+                                        placeholder="Konunuzu yazın... (örn: Matematik, Tarih, Bilim)"
+                                    >
+                                    
+                                    <!-- Quick Topic Buttons -->
+                                    <div class="quick-topics-grid">
+                                        <button class="quick-topic-btn" data-topic="Matematik">
+                                            <i class="fas fa-calculator"></i>
+                                            <span>Matematik</span>
+                                        </button>
+                                        <button class="quick-topic-btn" data-topic="Tarih">
+                                            <i class="fas fa-landmark"></i>
+                                            <span>Tarih</span>
+                                        </button>
+                                        <button class="quick-topic-btn" data-topic="Bilim">
+                                            <i class="fas fa-flask"></i>
+                                            <span>Bilim</span>
+                                        </button>
+                                        <button class="quick-topic-btn" data-topic="Coğrafya">
+                                            <i class="fas fa-globe"></i>
+                                            <span>Coğrafya</span>
+                                        </button>
+                                        <button class="quick-topic-btn" data-topic="Edebiyat">
+                                            <i class="fas fa-book-open"></i>
+                                            <span>Edebiyat</span>
+                                        </button>
+                                        <button class="quick-topic-btn" data-topic="Teknoloji">
+                                            <i class="fas fa-microchip"></i>
+                                            <span>Teknoloji</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Difficulty Selection -->
+                                <div class="difficulty-selection-group">
+                                    <label class="setup-label">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        Zorluk Seviyesi
+                                    </label>
+                                    <div class="difficulty-options">
+                                        <button class="difficulty-option" data-difficulty="Kolay">
+                                            <i class="fas fa-seedling"></i>
+                                            <span class="difficulty-name">Kolay</span>
+                                            <span class="difficulty-desc">Başlangıç seviyesi</span>
+                                        </button>
+                                        <button class="difficulty-option active" data-difficulty="Orta">
+                                            <i class="fas fa-tree"></i>
+                                            <span class="difficulty-name">Orta</span>
+                                            <span class="difficulty-desc">Standart seviye</span>
+                                        </button>
+                                        <button class="difficulty-option" data-difficulty="Zor">
+                                            <i class="fas fa-mountain"></i>
+                                            <span class="difficulty-name">Zor</span>
+                                            <span class="difficulty-desc">İleri seviye</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Question Count Selection -->
+                                <div class="question-count-selection-group">
+                                    <label class="setup-label">
+                                        <i class="fas fa-list-ol"></i>
+                                        Soru Sayısı
+                                    </label>
+                                    <div class="question-count-options">
+                                        <button class="question-count-option active" data-count="5">
+                                            <i class="fas fa-star"></i>
+                                            <span class="count-name">5 Soru</span>
+                                            <span class="count-desc">Hızlı test</span>
+                                        </button>
+                                        <button class="question-count-option" data-count="10">
+                                            <i class="fas fa-star"></i>
+                                            <span class="count-name">10 Soru</span>
+                                            <span class="count-desc">Orta test</span>
+                                        </button>
+                                        <button class="question-count-option" data-count="15">
+                                            <i class="fas fa-star"></i>
+                                            <span class="count-name">15 Soru</span>
+                                            <span class="count-desc">Kapsamlı test</span>
+                                        </button>
+                                        <button class="question-count-option" data-count="20">
+                                            <i class="fas fa-star"></i>
+                                            <span class="count-name">20 Soru</span>
+                                            <span class="count-desc">Detaylı test</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Start Quiz Button -->
+                                <button id="start-quiz-btn" class="start-quiz-btn">
+                                    <i class="fas fa-play"></i>
+                                    <span>Quiz'e Başla</span>
+                                    <div class="btn-glow"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Game Section -->
+                    <div id="quiz-game" class="quiz-game-section" style="display: none;">
+                        <!-- Quiz Header -->
+                        <div class="quiz-header">
+                            <div class="quiz-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="quiz-progress-fill"></div>
+                                </div>
+                                <span class="progress-text" id="quiz-progress-text">Soru 1/5</span>
+                            </div>
+                            
+                            <div class="quiz-timer">
+                                <div class="timer-circle">
+                                    <svg class="timer-svg" viewBox="0 0 36 36">
+                                        <path class="timer-track"
+                                            d="M18,2.0845 a 15.9155,15.9155 0 0,1 0,31.831 a 15.9155,15.9155 0 0,1 0,-31.831"
+                                            fill="none"
+                                            stroke-width="2"/>
+                                        <path class="timer-progress" id="timer-progress"
+                                            d="M18,2.0845 a 15.9155,15.9155 0 0,1 0,31.831 a 15.9155,15.9155 0 0,1 0,-31.831"
+                                            fill="none"
+                                            stroke-width="2"
+                                            stroke-dasharray="100, 100"/>
+                                    </svg>
+                                    <div class="timer-number" id="timer-number">30</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Question -->
+                        <div class="quiz-question-card">
+                            <div class="question-number" id="question-number">1</div>
+                            <div class="question-content">
+                                <h3 id="quiz-question-text">Soru yükleniyor...</h3>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Options -->
+                        <div class="quiz-options-container" id="quiz-options-container">
+                            <!-- Options will be dynamically inserted here -->
+                        </div>
+
+                        <!-- Quiz Actions -->
+                        <div class="quiz-actions">
+                            <button id="submit-quiz-answer" class="submit-answer-btn" disabled>
+                                <i class="fas fa-check"></i>
+                                <span>Cevabı Onayla</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Result Section -->
+                    <div id="quiz-result" class="quiz-result-section" style="display: none;">
+                        <div class="result-card">
+                            <div class="result-animation" id="result-animation">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            
+                            <div class="result-content">
+                                <h3 id="result-title">Doğru Cevap!</h3>
+                                <p id="result-message">Tebrikler! Soruyu doğru yanıtladınız.</p>
+                                
+                                <div class="result-explanation" id="result-explanation">
+                                    <h4>Açıklama:</h4>
+                                    <p id="explanation-text">Açıklama metni buraya gelecek...</p>
+                                </div>
+                            </div>
+                            
+                            <div class="result-actions">
+                                <button id="next-question-btn" class="next-btn">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span>Sonraki Soru</span>
+                                </button>
+                                <button id="finish-quiz-btn" class="finish-btn" style="display: none;">
+                                    <i class="fas fa-flag-checkered"></i>
+                                    <span>Quiz'i Bitir</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Summary Section -->
+                    <div id="quiz-summary" class="quiz-summary-section" style="display: none;">
+                        <div class="summary-card">
+                            <div class="summary-header">
+                                <div class="summary-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3>Quiz Tamamlandı!</h3>
+                                <p>Performansınızı inceleyin</p>
+                            </div>
+                            
+                            <div class="summary-stats">
+                                <div class="stat-box">
+                                    <div class="stat-value" id="total-questions-stat">0</div>
+                                    <div class="stat-label">Toplam Soru</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value" id="correct-answers-stat">0</div>
+                                    <div class="stat-label">Doğru Cevap</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value" id="success-rate-stat">0%</div>
+                                    <div class="stat-label">Başarı Oranı</div>
+                                </div>
+                            </div>
+                            
+                            <div class="summary-actions">
+                                <button id="new-quiz-btn" class="new-quiz-btn">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Yeni Quiz</span>
+                                </button>
+                                <button id="review-answers-btn" class="review-btn">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Cevapları İncele</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
