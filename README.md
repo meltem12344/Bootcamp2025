@@ -7,6 +7,27 @@
 ### - Database ile bağlantılar eklendi (daha fazla da eklenecek)
 ### - Kullanıcı sistemi eklendi
 
+## Api keyler
+
+1 - .env adlı bir dosya oluşturun daha sonra aşağıda ki kısımları oraya kopyalayın 
+
+```bash
+# LLM api bilgileri
+GEMINI_API_KEY=Google ai studiondan alınmış api key
+
+
+# rastgele bir kod şifrelemek ve şifreleri geri çözmek için 
+SECRET_KEY=1q33DqYoMwm34ZqJHlSnZXq9J6EDMlv21jSNZDiGyg8wQSrpba60OAYuI9JjyzB3XJQjqegOe4QgF5G8V36R3
+
+# SQLite Cloud bağlantı bilgileri kısımları burayı aynı şekilde bırakabilirsiniz
+SQLITECLOUD_HOST=cwovl7xsnk.g4.sqlite.cloud
+SQLITECLOUD_PORT=8860
+SQLITECLOUD_DATABASE=auth.sqlitecloud
+SQLITECLOUD_API_KEY=LkAOpm2PTAdhgRMIhB0rH1Cvt8sBbfRyoFXQz2rjktY
+```
+
+
+
 ## Kurulum
 1 - git kuruluysa bu şekilde yükelyebilirsiniz cmd'den (yüklü değilse direkt dosya olarak indirebilirsiniz) 
 ```bash
