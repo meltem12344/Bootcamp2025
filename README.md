@@ -22,7 +22,7 @@ SECRET_KEY=1q33DqYoMwm34ZqJHlSnZXq9J6EDMlv21jSNZDiGyg8wQSrpba60OAYuI9JjyzB3XJQjq
 # SQLite Cloud bağlantı bilgileri kısımları burayı aynı şekilde bırakabilirsiniz
 SQLITECLOUD_HOST=cwovl7xsnk.g4.sqlite.cloud
 SQLITECLOUD_PORT=8860
-SQLITECLOUD_DATABASE=auth.sqlitecloud
+SQLITECLOUD_DATABASE=kullanici-verileri
 SQLITECLOUD_API_KEY=LkAOpm2PTAdhgRMIhB0rH1Cvt8sBbfRyoFXQz2rjktY
 ```
 
