@@ -4,7 +4,7 @@
 ## Yapılanlar 
 
 ### - Mini quiz eklendi
-### - Database ile bağlantılar eklendi (daha eklenecek)
+### - Database ile bağlantılar eklendi (daha fazla da eklenecek)
 ### - Kullanıcı sistemi eklendi
 
 ## Kurulum
