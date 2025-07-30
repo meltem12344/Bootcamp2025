@@ -101,6 +101,16 @@ class LoginManager {
             });
             
             if (response.ok) {
+                const data = await response.json();
+                
+                // LocalStorage'a kullanıcı bilgilerini kaydet
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userInfo', JSON.stringify({
+                    username: username,
+                    user_id: data.user_id, // Gerçek user ID'yi ekle
+                    access_token: data.access_token
+                }));
+                
                 this.showMessage('Giriş başarılı! Yönlendiriliyor...', 'success');
                 
                 setTimeout(() => {
@@ -152,6 +162,16 @@ class LoginManager {
             });
             
             if (response.ok) {
+                const data = await response.json();
+                
+                // Kayıt başarılı olduğunda user ID'yi localStorage'a kaydet
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userInfo', JSON.stringify({
+                    username: this.regUsernameInput.value.trim(),
+                    user_id: data.user_id,
+                    access_token: null // Register'da token yok
+                }));
+                
                 this.showMessage('Kayıt başarılı! Giriş yapabilirsiniz.', 'success', true);
                 
                 // Reset form and switch to login

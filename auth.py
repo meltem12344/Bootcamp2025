@@ -1,13 +1,13 @@
 from datetime import timedelta, datetime
 from typing import Annotated
-from fastapi import APIRouter,Depends,HTTPException
+from fastapi import APIRouter,Depends,HTTPException,Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from starlette import status
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
 from jose import jwt, JWTError
-from db_op import create_user, get_user_by_username
+from db_op import create_user, get_user_by_username, save_user_login
 import config
  
  
@@ -33,11 +33,14 @@ class Token(BaseModel):
 
 @router.post('/',status_code=status.HTTP_201_CREATED)
 async def create_user_api(create_user_request:CreateUserRequest):
-    create_user(email=create_user_request.email,
+    user_id = create_user(email=create_user_request.email,
                 username=create_user_request.username,
                 password=bcrypt_context.hash(create_user_request.password))
     
-    return JSONResponse(content={"message": "User created successfully"}, status_code=status.HTTP_201_CREATED)
+    if user_id:
+        return JSONResponse(content={"message": "User created successfully", "user_id": user_id}, status_code=status.HTTP_201_CREATED)
+    else:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="User creation failed")
     
 def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     encode = {'sub': username, 'id': user_id}
@@ -68,16 +71,25 @@ async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):
         
         
 @router.post("/token", response_model=Token)
-async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
+async def login_for_access_token(request: Request, form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     user = authenticate_user(form_data.username, form_data.password)
     if not user:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                           detail='Kullanıcı adı veya şifre hatalı')
     
+    # Giriş kaydını kaydet
+    client_ip = request.client.host if request.client else None
+    user_agent = request.headers.get("user-agent", None)
+    save_user_login(user['id'], client_ip, user_agent)
+    
     token = create_access_token(user['username'], user['id'], timedelta(minutes=480))  # 8 saat
     
     # Cookie ile token'ı ayarla
-    response = JSONResponse(content={'access_token': token, 'token_type': 'bearer'})
+    response = JSONResponse(content={
+        'access_token': token, 
+        'token_type': 'bearer',
+        'user_id': str(user['id'])  # User ID'yi response'a ekle
+    })
     response.set_cookie(
         key="access_token",
         value=token,

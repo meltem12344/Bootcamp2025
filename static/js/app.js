@@ -13,8 +13,19 @@ class EducationPlatform {
         this.recordingStartTime = null;
         this.recordingTimer = null;
         
-        // Quiz variables
-        this.userId = null;
+        // Quiz system
+        this.userId = this.getUserIdFromStorage(); // LocalStorage'dan user ID'yi al
+        
+        // User ID kontrolü - eğer yoksa login sayfasına yönlendir
+        if (!this.userId) {
+            console.log('User ID bulunamadı, login sayfasına yönlendiriliyor...');
+            window.location.href = '/login';
+            return; // Constructor'ı durdur
+        }
+        
+        // Preferences kontrolü - eğer daha önce preferences verdi ise direkt chat sayfasına geç
+        this.checkUserPreferences();
+        
         this.currentQuestion = null;
         this.quizTimer = null;
         this.quizTimeLeft = 30;
@@ -81,6 +92,9 @@ class EducationPlatform {
         // Stats Elements
         this.showStatsBtn = document.getElementById('show-stats-btn');
         this.refreshStatsBtn = document.getElementById('refresh-stats-btn');
+        
+        // Logout Elements
+        this.logoutBtn = document.getElementById('logout-btn');
         
         // Quiz Elements - Updated for new structure
         this.quizTopicInput = document.getElementById('quiz-topic-input');
@@ -178,6 +192,11 @@ class EducationPlatform {
         // Stats Event Listeners
         this.showStatsBtn.addEventListener('click', () => this.showUserSessionStats());
         this.refreshStatsBtn.addEventListener('click', () => this.refreshUserStats());
+        
+        // Logout Event Listener
+        if (this.logoutBtn) {
+            this.logoutBtn.addEventListener('click', () => this.handleLogout());
+        }
     }
 
     initializeQuizEventListeners() {
@@ -277,19 +296,9 @@ class EducationPlatform {
         submitButton.innerHTML = '<span class="loading-spinner"></span> Ayarlanıyor...';
 
         try {
-            // Eğer user_id yoksa oluştur
+            // User ID kontrolü
             if (!this.userId) {
-                const userSessionResponse = await fetch('/create-user-session', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-                
-                if (userSessionResponse.ok) {
-                    const userData = await userSessionResponse.json();
-                    this.userId = userData.user_id;
-                } else {
-                    throw new Error('Kullanıcı oturumu oluşturulamadı');
-                }
+                throw new Error('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.');
             }
 
             // Preferences'ı user_id ile birlikte gönder
@@ -345,24 +354,10 @@ class EducationPlatform {
             return;
         }
 
-        // Eğer user_id yoksa oluştur
+        // User ID kontrolü
         if (!this.userId) {
-            try {
-                const userSessionResponse = await fetch('/create-user-session', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-                
-                if (userSessionResponse.ok) {
-                    const userData = await userSessionResponse.json();
-                    this.userId = userData.user_id;
-                } else {
-                    throw new Error('Kullanıcı oturumu oluşturulamadı');
-                }
-            } catch (error) {
-                this.showStatusMessage('Kullanıcı oturumu oluşturulamadı.', 'error');
-                return;
-            }
+            this.showStatusMessage('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.', 'error');
+            return;
         }
 
         this.setLoadingState(true);
@@ -491,24 +486,10 @@ class EducationPlatform {
             return;
         }
 
-        // Eğer user_id yoksa oluştur
+        // User ID kontrolü
         if (!this.userId) {
-            try {
-                const userSessionResponse = await fetch('/create-user-session', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
-                });
-                
-                if (userSessionResponse.ok) {
-                    const userData = await userSessionResponse.json();
-                    this.userId = userData.user_id;
-                } else {
-                    throw new Error('Kullanıcı oturumu oluşturulamadı');
-                }
-            } catch (error) {
-                this.showStatusMessage('Kullanıcı oturumu oluşturulamadı.', 'error');
-                return;
-            }
+            this.showStatusMessage('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.', 'error');
+            return;
         }
 
         this.setLoadingState(true);
@@ -1117,23 +1098,13 @@ class EducationPlatform {
 
     // Quiz Methods
     async initializeQuiz() {
-        try {
-            const response = await fetch('/create-user-session', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' }
-            });
-            
-            if (response.ok) {
-                const data = await response.json();
-                this.userId = data.user_id;
-                this.showToast('Quiz oturumu başlatıldı!', 'success');
-            } else {
-                throw new Error('Kullanıcı oturumu oluşturulamadı');
-            }
-        } catch (error) {
-            this.showToast('Quiz başlatılırken hata oluştu', 'error');
-            console.error('Quiz initialization error:', error);
+        // Bu fonksiyon artık gerekli değil çünkü user ID localStorage'dan alınıyor
+        // Sadece user ID kontrolü yapıyoruz
+        if (!this.userId) {
+            this.showToast('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.', 'error');
+            return false;
         }
+        return true;
     }
 
     selectQuickTopic(topic) {
@@ -1168,6 +1139,7 @@ class EducationPlatform {
             const topic = this.quizTopicInput.value.trim();
             const difficulty = document.querySelector('.difficulty-option.active').dataset.difficulty;
             
+            
             if (!topic) {
                 this.showToast('Lütfen bir konu seçin', 'warning');
                 return;
@@ -1177,9 +1149,10 @@ class EducationPlatform {
                 return;
             }
             
-            // Initialize quiz if not already done
+            // User ID kontrolü
             if (!this.userId) {
-                await this.initializeQuiz();
+                this.showToast('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.', 'error');
+                return;
             }
             
             // Reset quiz stats
@@ -1200,6 +1173,7 @@ class EducationPlatform {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
+                    user_id:this.userId,
                     topic, 
                     difficulty, 
                     question_count: this.selectedQuestionCount 
@@ -1379,6 +1353,12 @@ class EducationPlatform {
     }
 
     async submitAnswer() {
+        // User ID kontrolü
+        if (!this.userId) {
+            this.showToast('Kullanıcı kimliği bulunamadı. Lütfen tekrar giriş yapın.', 'error');
+            return;
+        }
+        
         // Check if manually submitted without selection
         if (!this.selectedOption && this.quizTimeLeft > 0) {
             this.showToast('Lütfen bir seçenek seçin', 'warning');
@@ -1797,6 +1777,72 @@ class EducationPlatform {
         }
         
         this.selectedQuestionCount = count;
+    }
+    
+    getUserIdFromStorage() {
+        try {
+            const userInfo = localStorage.getItem('userInfo');
+            if (userInfo) {
+                const user = JSON.parse(userInfo);
+                if (user.user_id) {
+                    return user.user_id;
+                }
+            }
+        } catch (e) {
+            console.error('User ID alınamadı:', e);
+        }
+        
+        // User ID yoksa null döndür, yönlendirme yapma
+        console.log('User ID bulunamadı');
+        return null;
+    }
+    
+    async checkUserPreferences() {
+        try {
+            const response = await fetch(`/get-user-preferences/${this.userId}`);
+            if (response.ok) {
+                const preferences = await response.json();
+                if (preferences && Object.keys(preferences).length > 0) {
+                    // Kullanıcının daha önce preferences'ı var, direkt chat sayfasına geç
+                    console.log('Kullanıcının daha önce preferences\'ı var, direkt chat sayfasına geçiliyor...');
+                    this.skipToChatPage();
+                    return;
+                }
+            }
+        } catch (error) {
+            console.error('Preferences kontrolü sırasında hata:', error);
+        }
+        
+        // Preferences yoksa survey sayfasında kal
+        console.log('Kullanıcının preferences\'ı yok, survey sayfasında kalınıyor...');
+    }
+    
+    skipToChatPage() {
+        // Survey container'ı gizle
+        if (this.surveyContainer) {
+            this.surveyContainer.style.display = 'none';
+        }
+        
+        // Chat container'ı göster
+        if (this.chatContainer) {
+            this.chatContainer.style.display = 'block';
+        }
+        
+        // İstatistik butonunu göster
+        if (this.showStatsBtn) {
+            this.showStatsBtn.style.display = 'flex';
+        }
+        
+        console.log('Chat sayfasına geçildi');
+    }
+    
+    handleLogout() {
+        // LocalStorage'dan kullanıcı bilgilerini temizle
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('userInfo');
+        
+        // Login sayfasına yönlendir
+        window.location.href = '/login';
     }
 }
 

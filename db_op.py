@@ -39,6 +39,7 @@ class DatabaseOp:
             self.conn_str = config.SQLITECLOUD_CONNECTION_STRING
             self.finit = True
             self.is_tables_created()
+            
         
     @contextmanager   
     def connection(self):
@@ -75,9 +76,11 @@ class DatabaseOp:
                 
                 
                 cursor.execute('''
-                    create table if not exists users (
+                    create table if not exists kullanicilar (
                         id integer primary key autoincrement,
-                        user_id text unique not null,
+                        username text unique not null,
+                        hashed_password text not null,
+                        email text unique not null,
                         tarih timestamp default (datetime('now', '+3 hours'))
                     )
                 ''')
@@ -85,7 +88,7 @@ class DatabaseOp:
                 cursor.execute('''
                     create table if not exists quiz_sonuclari (
                         id integer primary key autoincrement,
-                        user_id text not null,
+                        user_id integer not null,
                         soru text not null,
                         cevap text not null,
                         dogru_cevap text not null,
@@ -94,7 +97,7 @@ class DatabaseOp:
                         zorluk text not null,
                         sure integer not null,
                         tarih timestamp default (datetime('now', '+3 hours')),
-                        foreign key (user_id) references users(user_id)
+                        foreign key (user_id) references kullanicilar(id)
                     )
                 ''')
                 
@@ -102,11 +105,23 @@ class DatabaseOp:
                 cursor.execute('''
                     create table if not exists kullanici_girisleri (
                         id integer primary key autoincrement,
-                        user_id text unique not null,
-                        tarih timestamp default (datetime('now', '+3 hours')),
-                        quiz_sayisi integer default 0,
-                        sohbet_sayisi integer default 0,
-                        foreign key (user_id) references users(user_id)
+                        user_id integer not null,
+                        giris_tarihi timestamp default (datetime('now', '+3 hours')),
+                        ip_adresi text,
+                        user_agent text,
+                        foreign key (user_id) references kullanicilar(id)
+                    )
+                ''')
+                
+                cursor.execute('''
+                    create table if not exists kullanici_istatistikleri (
+                        id integer primary key autoincrement,
+                        user_id integer unique not null,
+                        toplam_chat_sayisi integer default 0,
+                        toplam_quiz_sayisi integer default 0,
+                        toplam_giris_sayisi integer default 0,
+                        son_aktivite timestamp default (datetime('now', '+3 hours')),
+                        foreign key (user_id) references kullanicilar(id)
                     )
                 ''')
                 
@@ -114,10 +129,10 @@ class DatabaseOp:
                 cursor.execute('''
                     create table if not exists kullanici_tercihleri (
                         id integer primary key autoincrement,
-                        user_id text unique not null,
+                        user_id integer unique not null,
                         tercihler text not null,
                         tarih timestamp default (datetime('now', '+3 hours')),
-                        foreign key (user_id) references users(user_id)
+                        foreign key (user_id) references kullanicilar(id)
                     )
                 ''')
                 
@@ -125,23 +140,14 @@ class DatabaseOp:
                 cursor.execute('''
                     create table if not exists kullanici_sorulari (
                         id integer primary key autoincrement,
-                        user_id text not null,
+                        user_id integer not null,
                         soru_metni text not null,
                         soru_cevabi text not null,
                         soru_tipi text default 'metin',
                         tarih timestamp default (datetime('now', '+3 hours')),
-                        foreign key (user_id) references users(user_id)
+                        foreign key (user_id) references kullanicilar(id)
                     )
                 ''')
-                
-                cursor.execute('''
-                    create table if not exists kullanicilar (
-                        id integer primary key autoincrement,
-                        username text not null,
-                        hashed_password text not null,
-                        email text not null
-                    )
-               ''')
                 connection.commit()
                  
         except Exception as e:
@@ -162,7 +168,7 @@ def save_quiz_result(user_id,question_text,user_answer,correct_answer,is_correct
                            insert into quiz_sonuclari
                            (user_id, soru, cevap, dogru_cevap, cevap_dogru_mu, konu, zorluk, sure)
                            values (?, ?, ?, ?, ?, ?, ?, ?)
-                           """, (user_id, question_text, user_answer, correct_answer, is_correct, topic, difficulty, time_taken))
+                           """, (int(user_id), question_text, user_answer, correct_answer, is_correct, topic, difficulty, time_taken))
             connection.commit()
             return True
     except Exception as e:
@@ -181,55 +187,38 @@ def create_user(username,password,email):
                            values (?, ?, ?)
                            """,(username,password,email))
             
-            connection.commit()
-            return True
-    except Exception as e:
-        print(e)
-        return False
-
-
-def save_user(user_id):
-    try:
-        with db_ins.connection() as connection:
-            cursor = connection.cursor()
+            # Oluşturulan kullanıcının ID'sini al
+            cursor.execute("""
+                           select id from kullanicilar 
+                           where username = ?
+                           """,(username,))
             
-            cursor.execute(
-                '''
-                insert into users
-                (user_id) values (?)  
-                ''',(user_id,))
+            user_id = cursor.fetchone()[0]
             
-            connection.commit()
-            return True
-    except Exception as e:
-        print(e)
-        return False
-
-def create_user_session(user_id):
-    
-    try:
-        with db_ins.connection() as connection:
-            cursor = connection.cursor()
-            cursor.execute('''
-                           insert or replace into kullanici_girisleri (user_id)
+            # Kullanıcı için otomatik olarak istatistik kaydı oluştur
+            cursor.execute("""
+                           insert or replace into kullanici_istatistikleri (user_id)
                            values (?)
-                           ''',(user_id,))
+                           """,(user_id,))
+            
             connection.commit()
-            return True
+            return user_id
     except Exception as e:
         print(e)
         return False
-    
+
+
+
 def update_user_quiz_count(user_id):
-    
     try:
         with db_ins.connection() as connection:
             cursor = connection.cursor()
             cursor.execute('''
-                           update kullanici_girisleri
-                           set quiz_sayisi = quiz_sayisi + 1
+                           update kullanici_istatistikleri
+                           set toplam_quiz_sayisi = toplam_quiz_sayisi + 1,
+                               son_aktivite = datetime('now', '+3 hours')
                            where user_id = ?
-                           ''',(user_id,))
+                           ''',(int(user_id),))
             connection.commit()
             return True
     except Exception as e:
@@ -237,24 +226,22 @@ def update_user_quiz_count(user_id):
         return False
 
 def update_user_chat_count(user_id):
-    
     try:
         with db_ins.connection() as connection:
             cursor = connection.cursor()
             cursor.execute('''
-                           update kullanici_girisleri
-                           set sohbet_sayisi = sohbet_sayisi + 1
+                           update kullanici_istatistikleri
+                           set toplam_chat_sayisi = toplam_chat_sayisi + 1,
+                               son_aktivite = datetime('now', '+3 hours')
                            where user_id = ?
-                           ''',(user_id,))
+                           ''',(int(user_id),))
             connection.commit()
             return True
     except Exception as e:
         print(e)
         return False
         
-def generate_user_id():
-    # basit bir şekilde her kullanıcı için rastgele bir id oluşturuluyor.
-    return str(uuid.uuid4())
+
 
 def save_user_preferences(user_id,preferences):
     try:
@@ -264,7 +251,7 @@ def save_user_preferences(user_id,preferences):
             cursor.execute('''
                            insert or replace into kullanici_tercihleri (user_id,tercihler)
                            values(?,?)
-                           ''',(user_id,preferences_s))
+                           ''',(int(user_id),preferences_s))
             connection.commit()
             return True
     except Exception as e:
@@ -278,7 +265,7 @@ def get_user_preferences(user_id):
             cursor = connection.cursor()
             cursor.execute('''
                 select tercihler from kullanici_tercihleri where user_id = ?
-            ''', (user_id,))
+            ''', (int(user_id),))
             result = cursor.fetchone()
             if result:
                 return json.loads(result[0])
@@ -306,7 +293,7 @@ def save_user_question(user_id, question_text, question_answer, question_type='m
             cursor.execute('''
                 insert into kullanici_sorulari (user_id, soru_metni, soru_cevabi, soru_tipi)
                 values (?, ?, ?, ?)
-            ''', (user_id, question_text, question_answer, question_type))
+            ''', (int(user_id), question_text, question_answer, question_type))
             connection.commit()
             return True
     except Exception as e:
@@ -322,26 +309,39 @@ def get_user_questions(user_id):
                 select soru_metni, soru_cevabi, soru_tipi, tarih 
                 from kullanici_sorulari WHERE user_id = ? 
                 order by tarih desc
-            ''', (user_id,))
+            ''', (int(user_id),))
             return cursor.fetchall()
     except Exception as e:
         print(e)
         return False
+    
+    
 def get_user_session_stats(user_id):
     # burada istatistiklerim kısmında gösterilen bilgileri çekiyoruz her o butona basıldığında tekrar sorgu çalıştırılıyor 
     try:
         with db_ins.connection() as connection:
             cursor = connection.cursor()
+            
+            # İstatistik bilgilerini al
             cursor.execute('''
-                select quiz_sayisi, sohbet_sayisi, tarih 
-                from kullanici_girisleri where user_id = ?
-            ''', (user_id,))
-            result = cursor.fetchone()
-            if result: # sonuç json tipinde olduğu için tek tek ayrıştırıyoruz
+                select toplam_quiz_sayisi, toplam_chat_sayisi, toplam_giris_sayisi, son_aktivite 
+                from kullanici_istatistikleri where user_id = ?
+            ''', (int(user_id),))
+            stats_result = cursor.fetchone()
+            
+            # Kullanıcının üye olma tarihini al
+            cursor.execute('''
+                select tarih from kullanicilar where id = ?
+            ''', (int(user_id),))
+            member_since = cursor.fetchone()[0]
+            
+            if stats_result: # sonuç json tipinde olduğu için tek tek ayrıştırıyoruz
                 return {
-                    'quiz_count': result[0],
-                    'chat_count': result[1], 
-                    'member_since': result[2]
+                    'quiz_count': stats_result[0],
+                    'chat_count': stats_result[1], 
+                    'login_count': stats_result[2],
+                    'last_activity': stats_result[3],
+                    'member_since': member_since
                 }
             return None
     except Exception as e:
@@ -361,7 +361,7 @@ def get_user_performance(user_id):
                     sum(case when cevap_dogru_mu = 1 then 1 else 0 end) as correct_answers,
                     sum(case when cevap_dogru_mu = 0 then 1 else 0 end) as incorrect_answers 
                 from quiz_sonuclari where user_id = ?
-            ''', (user_id,))
+            ''', (int(user_id),))
             stats = cursor.fetchone()
             
             
@@ -370,7 +370,7 @@ def get_user_performance(user_id):
                 from quiz_sonuclari 
                 where user_id = ? and cevap_dogru_mu = 0 
                 group by konu order by wrong_count desc
-            ''', (user_id,))
+            ''', (int(user_id),))
             topics = dict(cursor.fetchall())
             
             cursor.execute('''
@@ -381,7 +381,7 @@ def get_user_performance(user_id):
                 from quiz_sonuclari 
                 where user_id = ? 
                 group by zorluk
-            ''', (user_id,))
+            ''', (int(user_id),))
             
             difficulty_stats = {}
             for row in cursor.fetchall():
@@ -425,3 +425,30 @@ def get_user_by_username(username):
     except Exception as e:
         print(e)
         return None
+
+def save_user_login(user_id, ip_address=None, user_agent=None):
+    """Kullanıcının giriş yaptığı zamanı ve bilgilerini kaydeder"""
+    try:
+        with db_ins.connection() as connection:
+            cursor = connection.cursor()
+            
+            # Giriş kaydını ekle
+            cursor.execute('''
+                insert into kullanici_girisleri (user_id, ip_adresi, user_agent)
+                values (?, ?, ?)
+            ''', (int(user_id), ip_address, user_agent))
+            
+            # İstatistik tablosundaki giriş sayısını güncelle
+            cursor.execute('''
+                update kullanici_istatistikleri
+                set toplam_giris_sayisi = toplam_giris_sayisi + 1,
+                    son_aktivite = datetime('now', '+3 hours')
+                where user_id = ?
+            ''', (int(user_id),))
+            
+            connection.commit()
+            return True
+    except Exception as e:
+        print(e)
+        return False
+

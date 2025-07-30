@@ -14,6 +14,40 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
+    <!-- Login Check Script -->
+    <script>
+        // Sayfa yüklendiğinde login kontrolü yap
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userInfo = localStorage.getItem('userInfo');
+            
+            if (!isLoggedIn || !userInfo) {
+                // Giriş yapılmamışsa login sayfasına yönlendir
+                window.location.href = '/login';
+                return;
+            }
+            
+            // Kullanıcı bilgilerini göster
+            try {
+                const user = JSON.parse(userInfo);
+                if (!user.user_id) {
+                    // User ID yoksa login sayfasına yönlendir
+                    console.error('User ID bulunamadı');
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userInfo');
+                    window.location.href = '/login';
+                    return;
+                }
+                console.log('Hoş geldiniz:', user.username);
+            } catch (e) {
+                console.error('Kullanıcı bilgileri okunamadı:', e);
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userInfo');
+                window.location.href = '/login';
+            }
+        });
+    </script>
+
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
@@ -35,6 +69,12 @@
                     <button id="show-stats-btn" class="stats-btn" style="display: none;" title="Kullanım İstatistiklerim">
                         <i class="fas fa-chart-bar"></i>
                         <span>İstatistiklerim</span>
+                    </button>
+                    
+                    <!-- Logout Button -->
+                    <button id="logout-btn" class="logout-btn" title="Çıkış Yap">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Çıkış</span>
                     </button>
                 </div>
 

@@ -56,7 +56,8 @@ async def transcribe_audio(file: UploadFile): # verdiğin ses dosyasını metne 
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
-    user = getattr(request.state, 'user', None)
+    # Ana sayfa artık client-side login kontrolü yapıyor
+    # Burada sadece template'i döndürüyoruz
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/login",response_class=HTMLResponse)
@@ -65,6 +66,18 @@ async def login(request:Request):
 
 
 
+
+@app.get("/get-user-preferences/{user_id}")
+async def get_user_preferences_endpoint(user_id: str):
+    try:
+        preferences = get_user_preferences(user_id)
+        if preferences:
+            return JSONResponse(content=preferences)
+        else:
+            return JSONResponse(content={}, status_code=404)
+    except Exception as e:
+        print(e)
+        return JSONResponse(content={"error": "Preferences alınırken hata oluştu"}, status_code=500)
 
 @app.post("/submit-preferences")
 async def submit_preferences(request: Request):
@@ -86,7 +99,6 @@ async def chat_text(request: Request):
     text = data.get("text")
     preferences = get_user_preferences(user_id)
     if preferences:
-        #tercihleri chat chaine ekle
         set_initial_context(preferences)
         
     if not user_id or not text:
@@ -94,10 +106,8 @@ async def chat_text(request: Request):
     
     response = get_response(text)
     
-    # Soru ve cevabı veritabanına kaydet (text türünde)
     save_user_question(user_id, text, response, question_type='text')
     
-    # Chat sayısını artır
     update_user_chat_count(user_id)
     
     return JSONResponse(content={"response": response})
@@ -112,13 +122,10 @@ async def chat_audio(user_id: str = Form(...), file: UploadFile = File(...)):
         chat_response = get_response(recognized_text)
         preferences = get_user_preferences(user_id)
         if preferences:
-            # Tercihleri context olrak ayarla
             set_initial_context(preferences)
             
-        # Soru ve cevabı veritabanına kaydet 
         save_user_question(user_id, recognized_text, chat_response, question_type='audio')
         
-        # Chat sayısını artır
         update_user_chat_count(user_id)
         
         return JSONResponse(content={"response": chat_response})
@@ -146,7 +153,6 @@ async def synthesize_speech_endpoint(request: Request):
     file_name = synthesize_speech(text)
     
     if file_name and isinstance(file_name, str) and os.path.exists(file_name):
-        # Dosyayı oku ve streaming response olarak döndür
         def iterfile():
             with open(file_name, "rb") as file:
                 yield from file
@@ -161,15 +167,15 @@ async def generate_quiz_questions_endpoint(request: Request):
         data = await request.json()
         topic = data.get("topic")
         difficulty = data.get("difficulty")
+        user_id = data.get("user_id")
         question_count = data.get("question_count", 5)
         
         if not topic or not difficulty:
             return JSONResponse(content={"error": "Konu ve zorluk seviyesi gerekli"}, status_code=400)
         
         # Tek seferde tüm soruları oluştur
-        
         questions_response = generate_multiple_quiz_questions(topic, difficulty, question_count)
-        
+        update_user_quiz_count(user_id)
         if not questions_response:
             return JSONResponse(content={"error": "Sorular oluşturulamadı"}, status_code=500)
         
@@ -259,25 +265,7 @@ async def get_user_session_stats_endpoint(user_id: str):
         print(e)
         return JSONResponse(content={"error": "Session verisi alınırken hata oluştu"}, status_code=500)
 
-@app.post("/create-user-session") 
-async def create_user_session_endpoint():
-    #burada her siteye giriş yapıldığında  rastgele bir  kullanıcı id oluşturuluyor
-    # bu kullanıcı id'si veritabanına kaydediliyor ve kullanıcının performansını takip edebilmek için kullanılıyor
-    # daha sonra kullanılan veri tabanı ile entegre edilecek  orada da her hesabın bir kullanıcı id'si olacak ve devamlı takip sağlanacak
-    try:
-        user_id = generate_user_id()
-        success_user = save_user(user_id) # Primary key
-        success = create_user_session(user_id) # Foreign key 
-        
-        
-        if success and success_user:
-            return JSONResponse(content={"user_id": user_id})
-        else:
-            return JSONResponse(content={"error": "Session oluşturulamadı"}, status_code=500)
-        
-    except Exception as e:
-        print(e)
-        return JSONResponse(content={"error": "Session oluşturulamadı"}, status_code=500)
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)

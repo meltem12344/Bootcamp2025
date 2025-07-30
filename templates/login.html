@@ -11,6 +11,31 @@
     <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
+    <!-- Login Check Script -->
+    <script>
+        // Sayfa yüklendiğinde login kontrolü yap
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userInfo = localStorage.getItem('userInfo');
+            
+            if (isLoggedIn && userInfo) {
+                try {
+                    const user = JSON.parse(userInfo);
+                    if (user.user_id) {
+                        // Zaten giriş yapılmışsa ana sayfaya yönlendir
+                        window.location.href = '/';
+                        return;
+                    }
+                } catch (e) {
+                    console.error('User info parse hatası:', e);
+                    // Hatalı veri varsa temizle
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userInfo');
+                }
+            }
+        });
+    </script>
+
     <!-- Particles Background -->
     <div class="particles"></div>
     
