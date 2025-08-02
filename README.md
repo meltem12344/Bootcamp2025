@@ -1,12 +1,12 @@
   <html>
   <body>
 
-<!-- #  ![ürün_ismi](bootcampFiles/general/headers/ürün_ismi.png) ürün ismi bulduktan sonra -->
+ #  ![ürün_ismi](bootcampFiles/general/headers/sophira_logo.png) 
 
 
   # **Team & Product Name**
 
-  <!-- ### **`ürün_ismi`** -->
+  <!-- ### **`SOPHIRA`** -->
 
   # Information About Team and Product
 
@@ -19,15 +19,17 @@
       <th>Title</th>
       <th>Socials</th>
     </tr>
+    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/meltem.png" width="50" height="50" /></td>
       <td>Meltem Orhan</td>
-      <td>Scrum Master and Developer</td>
+      <td>Product Owner, Scrum Master and Developer</td>
       <td>
         <a href="https://github.com/meltem12344" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/meltemorhan/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
+    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/yusuf.png" width="50" height="50" /></td>
       <td>Yusuf Enes Budak</td>
@@ -37,6 +39,7 @@
         <a href="https://www.linkedin.com/in/yusufenesbudak/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
+    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/selcan.png" width="50" height="50" /></td>
       <td>Selcan Ünal</td>
@@ -46,8 +49,9 @@
         <a href="https://www.linkedin.com/in/selcanunal/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
+    
     <tr>
-      <td><img src="bootcampFiles/general/squarepics/beyzanur.png" width="50" height="50" /></td>
+      <td><img src="bootcampFiles/general/squarepics/beyzanur.jpg" width="50" height="50" /></td>
       <td>Beyzanur Dağdelen</td>
       <td>Developer</td>
       <td>
@@ -55,6 +59,7 @@
         <a href="https://www.linkedin.com/in/beyzanurdagdelen/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
+    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/onural.png" width="50" height="50" /></td>
       <td>Onural Osman Kalaycı</td>
@@ -64,6 +69,7 @@
         <a href="https://www.linkedin.com/in/onuralklyc/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
+    
   </table>
 
 
