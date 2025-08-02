@@ -22,7 +22,7 @@
       <td>Meltem Orhan</td>
       <td>Product Owner, Scrum Master and Developer</td>
       <td>
-        <a href="https://github.com/meltem12344" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://github.com/meltem12344" target="_blank"><img src="bootcampFiles/general/social/github-mark.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/meltemorhan/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
@@ -31,7 +31,7 @@
       <td>Yusuf Enes Budak</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/yusuffenes" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://github.com/yusuffenes" target="_blank"><img src="bootcampFiles/general/social/github-mark.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/yusufenesbudak/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
@@ -40,7 +40,7 @@
       <td>Selcan Ünal</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/selcanu" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://github.com/selcanu" target="_blank"><img src="bootcampFiles/general/social/github-mark.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/selcanunal/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
@@ -49,7 +49,7 @@
       <td>Beyzanur Dağdelen</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/1beyza" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://github.com/1beyza" target="_blank"><img src="bootcampFiles/general/social/github-mark.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/beyzanurdagdelen/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
@@ -58,7 +58,7 @@
       <td>Onural Osman Kalaycı</td>
       <td>Developer</td>
       <td>
-        <a href="https://github.com/onuralklyc" target="_blank"><img src="bootcampFiles/general/social/github.png" width="20" height="20"/></a>
+        <a href="https://github.com/onuralklyc" target="_blank"><img src="bootcampFiles/general/social/github-mark.png" width="20" height="20"/></a>
         <a href="https://www.linkedin.com/in/onuralklyc/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
