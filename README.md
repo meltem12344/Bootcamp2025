@@ -17,7 +17,6 @@
       <th>Title</th>
       <th>Socials</th>
     </tr>
-    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/meltem.png" width="50" height="50" /></td>
       <td>Meltem Orhan</td>
@@ -27,7 +26,6 @@
         <a href="https://www.linkedin.com/in/meltemorhan/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/yusuf.png" width="50" height="50" /></td>
       <td>Yusuf Enes Budak</td>
@@ -37,7 +35,6 @@
         <a href="https://www.linkedin.com/in/yusufenesbudak/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/selcan.png" width="50" height="50" /></td>
       <td>Selcan Ünal</td>
@@ -47,7 +44,6 @@
         <a href="https://www.linkedin.com/in/selcanunal/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/beyzanur.jpg" width="50" height="50" /></td>
       <td>Beyzanur Dağdelen</td>
@@ -57,7 +53,6 @@
         <a href="https://www.linkedin.com/in/beyzanurdagdelen/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    
     <tr>
       <td><img src="bootcampFiles/general/squarepics/onural.png" width="50" height="50" /></td>
       <td>Onural Osman Kalaycı</td>
@@ -67,7 +62,6 @@
         <a href="https://www.linkedin.com/in/onuralklyc/" target="_blank" ><img src="bootcampFiles/general/social/linkedin.png" width="20" height="20" /></a>
       </td>
     </tr>
-    
   </table>
 
 
