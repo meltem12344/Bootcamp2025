@@ -1,11 +1,10 @@
-### login register sayfasını şu anda ana sayfada ekli değil oraya ulaşmak için adresin sonuna /login yazabilirsiniz arka planda çalışıyor ama arayüze eklemedim henüz.
 
 
 ## Yapılanlar 
 
-### - Mini quiz eklendi
-### - Database ile bağlantılar eklendi (daha fazla da eklenecek)
-### - Kullanıcı sistemi eklendi
+### - pdf olusturma kısmı eklendi
+### - arayüzde değişiklikler oldu
+
 
 ## Api keyler
 
