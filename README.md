@@ -67,8 +67,7 @@
 
 
   ## Product Description
-  This project is an AI-powered educational platform that offers personalized subject explanations based on students' learning styles (visual, auditory, kinesthetic) and personality traits. Using student profiles, the GPT-based system generates dynamic content and provides features such as voice-based feedback, mini quizzes, mental fatigue analysis, and personalized PDF booklets. The goal is to enhance learning efficiency through tailored instruction and reduce educational inequality.
-
+  This project is an AI-powered educational assistant designed to provide students with personalized learning experiences. By analyzing users' learning styles (visual, auditory, kinesthetic) and interaction history, the platform dynamically generates subject explanations, practice quizzes, and voice-based responses using a Gemini-based system. It also allows students to download topic-specific PDF summaries of their learning journey. With its focus on accessibility and customization, the platform aims to improve learning outcomes and promote equal educational opportunities for all learners.
 
 <details>
   <summary><h2>Product Features</h2></summary>
@@ -84,9 +83,6 @@
 
   <h3> Adaptive Mini Quizzes:</h3>
   <p>Mini quizzes are personalized to evaluate the student’s current knowledge level and adapt accordingly with detailed feedback, promoting active learning.</p>
-
-  <h3> Mental Fatigue Detection:</h3>
-  <p>By analyzing typing patterns and response times, the system detects signs of mental fatigue and suggests breaks to maintain focus and performance.</p>
 
   <h3> Personalized Learning Booklet:</h3>
   <p>At the end of each session or topic, students receive a downloadable PDF booklet summarizing what they’ve learned, including examples tailored to their style.</p>
@@ -106,12 +102,9 @@
   <h3> Teacher & Tutor Access:</h3>
   <p>Private tutors and institutions can use the platform to better understand student needs and provide custom support based on detailed progress analytics.</p>
 
-  <h3> Progress Tracking & Motivation Tools:</h3>
-  <p>Students receive insights into their own learning journey with visualized progress, motivational badges, and milestone-based rewards.</p>
-
 </details>
 
-  <details>
+ <details>
     <summary><h2>Target Audience</h2></summary>
     <p>The target audience of this platform includes students from middle school to university level who seek a more personalized and engaging learning experience beyond traditional, standardized education methods. It is especially designed for learners with diverse cognitive styles—visual, auditory, and kinesthetic—as well as for individuals with learning difficulties such as dyslexia or attention disorders. Additionally, private tutors, educational institutions, and parents aiming to provide adaptive support to students form an important user base. By offering inclusive, AI-powered, and style-based content generation, the platform also appeals to global users who value accessibility, customization, and effective digital learning tools.</p>
   </details>
