@@ -1,6 +1,0 @@
-
-1. favicon.ico - Site ikonu
-2. og-image.jpg - Sosyal medya paylaşım görseli
-3. logo.png - Platform logosu
-4. hero-bg.jpg - Ana sayfa arka plan görseli
- 
