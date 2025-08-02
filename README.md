@@ -1,12 +1,10 @@
   <html>
   <body>
-
+    
+ # **Product Name**
+    
  #  ![ürün_ismi](bootcampFiles/general/headers/sophira_logo.png) 
 
-
-  # **Team & Product Name**
-
-  <!-- ### **`SOPHIRA`** -->
 
   # Information About Team and Product
 
