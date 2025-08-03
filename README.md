@@ -67,46 +67,54 @@
 
 
   ## Product Description
-  This project is an AI-powered educational assistant designed to provide students with personalized learning experiences. By analyzing users' learning styles (visual, auditory, kinesthetic) and interaction history, the platform dynamically generates subject explanations, practice quizzes, and voice-based responses using a Gemini-based system. It also allows students to download topic-specific PDF summaries of their learning journey. With its focus on accessibility and customization, the platform aims to improve learning outcomes and promote equal educational opportunities for all learners.
+    This project is an AI-powered learning assistant developed as a web-based educational platform. Its main goal is to provide a personalized learning experience by analyzing students’ learning styles (visual, auditory, kinesthetic).
+
+    Using the Gemini API, the system generates topic-specific explanations tailored to each student, provides real-time voice-based feedback, and evaluates knowledge through adaptive mini quizzes. Additionally, users can download filtered summaries of their learning process in PDF format.
+
+    The platform is designed with a focus on accessibility, personalization, and efficiency. Its objective is to enhance learning outcomes and offer equal educational opportunities for every learner.
+
 
 <details>
   <summary><h2>Product Features</h2></summary>
-
-  <h3> Personalized Learning Experience:</h3>
-  <p>The platform dynamically adapts the teaching content based on each student’s learning style (visual, auditory, kinesthetic) and personality traits, offering a truly individualized educational journey.</p>
-
-  <h3> AI-Powered Content Generation:</h3>
+  <h3>Personalized Learning Experience:</h3>
+  <p>The platform dynamically adapts the teaching content based on each student’s learning style and personality traits, offering a truly individualized educational journey.</p>
+  
+  <h3>AI-Powered Content Generation:</h3>
   <p>Leveraging GPT-based AI, the system generates personalized explanations tailored to the student’s learning profile, increasing comprehension and engagement.</p>
-
-  <h3> Voice-Based Feedback:</h3>
+  
+  <h3>Voice-Based Feedback:</h3>
   <p>Students can explain topics verbally using a microphone. The system analyzes their explanations and provides constructive feedback on misunderstood or missing parts.</p>
-
-  <h3> Adaptive Mini Quizzes:</h3>
+  
+  <h3>Adaptive Mini Quizzes:</h3>
   <p>Mini quizzes are personalized to evaluate the student’s current knowledge level and adapt accordingly with detailed feedback, promoting active learning.</p>
-
-  <h3> Personalized Learning Booklet:</h3>
-  <p>At the end of each session or topic, students receive a downloadable PDF booklet summarizing what they’ve learned, including examples tailored to their style.</p>
-
-  <h3> Student-to-AI Interaction:</h3>
+  
+  <h3>Personalized Learning Booklet:</h3>
+  <p>At the end of each session or topic, students receive a downloadable PDF booklet summarizing what they’ve learned.</p>
+  
+  <h3>Student-to-AI Interaction:</h3>
   <p>The system supports conversational interaction with the AI, allowing students to ask questions, request clarifications, or explore topics in more depth, just like having a personal tutor.</p>
-
-  <h3> Secure Student Profiles:</h3>
+  
+  <h3>Secure Student Profiles:</h3>
   <p>Each student has a secure profile storing their learning preferences, performance data, and progress, ensuring a consistent and safe learning experience across sessions.</p>
-
-  <h3> Multi-language Support:</h3>
+  
+  <h3>Multi-language Support:</h3>
   <p>The platform is designed to be inclusive, supporting multiple languages so learners from different backgrounds can fully benefit from the personalized content.</p>
-
-  <h3> Style-Based Learning Modes:</h3>
+  
+  <h3>Style-Based Learning Modes:</h3>
   <p>Students can choose or be assigned visual-heavy, audio-rich, or text-focused content delivery based on their cognitive preferences, improving retention and satisfaction.</p>
-
-  <h3> Teacher & Tutor Access:</h3>
+  
+  <h3>Teacher & Tutor Access:</h3>
   <p>Private tutors and institutions can use the platform to better understand student needs and provide custom support based on detailed progress analytics.</p>
 
 </details>
 
  <details>
     <summary><h2>Target Audience</h2></summary>
-    <p>The target audience of this platform includes students from middle school to university level who seek a more personalized and engaging learning experience beyond traditional, standardized education methods. It is especially designed for learners with diverse cognitive styles—visual, auditory, and kinesthetic—as well as for individuals with learning difficulties such as dyslexia or attention disorders. Additionally, private tutors, educational institutions, and parents aiming to provide adaptive support to students form an important user base. By offering inclusive, AI-powered, and style-based content generation, the platform also appeals to global users who value accessibility, customization, and effective digital learning tools.</p>
+    <p>The target audience of this platform includes learners from high school to postgraduate levels who are seeking a more personalized and interactive learning experience beyond traditional, standardized education methods. It is also suitable for professionals aiming to reinforce their knowledge, as well as beginners who are curious and self-driven to explore new topics independently.
+
+The platform is especially designed for individuals with diverse cognitive styles—visual, auditory, and kinesthetic—by offering content selection based on learning preferences, voice-based explanation features, adaptive mini quizzes, and downloadable PDF summaries. These tools allow users to engage with the material at their own pace and in their preferred format.
+
+By providing accessible, customizable, and AI-powered learning tools, the platform appeals to a broad range of users who value flexible, personalized, and effective digital education experiences for both academic and personal growth.</p>
   </details>
 
  
