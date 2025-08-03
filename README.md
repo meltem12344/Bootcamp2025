@@ -36,7 +36,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="bootcampFiles/general/squarepics/selcan.png" width="50" height="50" /></td>
+      <td><img src="bootcampFiles/general/squarepics/selcan.jpg" width="50" height="50" /></td>
       <td>Selcan Ünal</td>
       <td>Developer</td>
       <td>
