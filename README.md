@@ -54,7 +54,7 @@
       </td>
     </tr>
     <tr>
-      <td><img src="bootcampFiles/general/squarepics/onural.png" width="50" height="50" /></td>
+      <td><img src="bootcampFiles/general/squarepics/onural.jpg" width="50" height="50" /></td>
       <td>Onural Osman Kalaycı</td>
       <td>Developer</td>
       <td>
