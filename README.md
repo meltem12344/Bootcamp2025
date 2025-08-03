@@ -7,6 +7,10 @@
 
 
   # Information About Team and Product
+  
+  # **Team & Product Name**
+
+  ### **`sophira`**
 
   ## Team Members
 
