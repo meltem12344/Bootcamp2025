@@ -421,8 +421,8 @@
 
   <details>
     <summary><h3>Sprint 3 - Sprint Board Update Screenshots</h3></summary>
-    <img src="bootcampFiles/sprintOne/boardupdate/1.png" style="max-width: 100%; height: auto;">
-    <img src="bootcampFiles/sprintOne/boardupdate/2.png" style="max-width: 100%; height: auto;">
+    <img src="bootcampFiles/sprintThree/boardupdate/1.png" style="max-width: 100%; height: auto;">
+    <img src="bootcampFiles/sprintThree/boardupdate/2.png" style="max-width: 100%; height: auto;">
   </details>
 
   - **Sprint Notes**:
