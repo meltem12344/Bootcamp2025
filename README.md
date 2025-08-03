@@ -112,7 +112,8 @@
   <p>By providing accessible, customizable, and AI-powered learning tools, the platform appeals to a broad range of users who value flexible, personalized, and effective digital education experiences for both academic and personal growth.</p>
 
 
- 
+   --- 
+
 
   <details>
     <summary><h1>Sprint 1</h1></summary>
@@ -238,13 +239,7 @@
 
   </details>
 
-
-
-
-
-
-
-
+  --- 
 
 
   <details>
@@ -397,15 +392,118 @@
   - **Reward System (to increase platform engagement)**  
     A reward system including badges, points, levels, or achievement notifications will be designed to enhance user engagement.
     Motivational UI elements will also be planned as part of this feature.
-
-
-
-
-  <details>
-    <summary><h1>Sprint 1</h1></summary>
-
+  </details>
+  
+  --- 
 
   <details>
+    <summary><h1>Sprint 3</h1></summary>
+
+
+ 
+  <details>
+    <summary><h3>Sprint 3 – Demo Video</h3></summary>
+  
+    <a href="https://www.youtube.com/watch?v=_ntCaU8sOyo" target="_blank">Click
+      <img src="https://img.youtube.com/vi/_ntCaU8sOyo/maxresdefault.jpg" width="480" />
+    </a>
+  
+  </details>
+
+  <details>
+    <summary><h3>Sprint 3 - Sprint Board Update Screenshots</h3></summary>
+    <img src="bootcampFiles/sprintOne/boardupdate/1.png" style="max-width: 100%; height: auto;">
+    <img src="bootcampFiles/sprintOne/boardupdate/2.png" style="max-width: 100%; height: auto;">
+  </details>
+
+  - **Sprint Notes**:
+    - A mini quiz module was developed that adapts to the user’s selected learning style.
+      
+    - Quiz questions are dynamically generated and collect real-time responses from the user.
+      
+    - A PDF export system was implemented — currently, only the chat history is included in the output.
+      
+    - The basic styling for the PDF was established, presenting questions and responses in a clean, readable format.
+      
+    - A PDF download button was added, with access tied to the active user session.
+      
+    - The codebase was refactored for clarity, with components like `chatbot.py` and `pdf_generator.py` modularized.
+      
+    - The PDF generation process was optimized using the ReportLab library.
+      
+    - AI responses and user messages are chronologically logged into the PDF file.
+      
+    - Secure `.env` file management was maintained, and new API operations were isolated.
+
+    - **Project Status**:  
+      The platform has evolved to support a dynamic quiz experience based on learning styles and to export user–AI interaction history in a structured PDF format.
+
+- **Expected Point Completion within Sprint**: 200 points
+
+- **Point Completion Logic**:  
+  The third sprint had a target of '200 points'.  
+
+  The core focus was:
+
+  - Development of the mini quiz module (40 pts) 
+  - Implementation of basic PDF export with chat history (30 pts) 
+  - AI explanation generation integrated with session-based learning styles (30 pts) 
+  - Creation of PDF export button and UI modal (20 pts) 
+  - File structuring and optimization (`chatbot.py`, `pdf_generator.py`) (20 pts) 
+  - Planned but not completed: Topic-based PDF export system (30 pts) 
+  - Planned but not completed: Fatigue analysis and prediction logic (30 pts) 
+
+  > A total of **140 out of 200 points** worth of work has been completed.  
+
+- **Daily Scrum**:
+  <details>
+    <summary><h2>Daily Scrum File</h2></summary>
+    <ul>
+      <li> <a href="./bootcampFiles/sprintThree/dailyScrum">See file</a></li>
+    </ul>
+  </details>
+
+
+- **Sprint Review:** In Sprint 3, the development team focused on expanding the platform's interactivity and output capabilities. The core achievements of this sprint include:
+
+  - A fully functional **mini quiz system** that generates questions based on the user's selected learning style.
+  - Implementation of a **PDF export feature** that allows users to download their chat history with AI.
+  - Integration of AI-generated explanations into the learning flow, aligned with session-based preferences.
+  - UI components for PDF export (download button and modal) were designed and added.
+  - Codebase was reorganized for better modularity and readability, especially for chatbot and PDF generation logic.
+
+  Despite these accomplishments, two features planned for this sprint could not be completed:
+  - The **topic-specific PDF export system** was postponed.
+  - The **fatigue analysis module** was not implemented.
+
+
+- **Sprint Retrospective:**
+  - **What went well:**
+    - Core features such as the mini quiz system and PDF export were successfully implemented.
+    - The user interface was simplified and made more intuitive for a better user experience.
+    - The codebase was modularized and improved in terms of readability and organization.
+    - The product reached a functionally complete and deliverable state.
+  
+  - **What could have been improved:**
+    - Some planned features (such as topic-based PDF export and fatigue analysis) could not be completed due to time constraints.
+    - More time could have been allocated to testing and quality assurance during development.
+    - Additional user testing on the UI/UX side could have provided valuable feedback for refinement.
+  
+  - **Final remarks:**
+    With Sprint 3, the development process has come to a close, and the product is ready for delivery. Key functionalities such as personalized learning content, AI-driven explanations, mini quizzes, and PDF export are fully integrated. While a few advanced features were not completed, they do not block core functionality and may be considered for future development.
+- **Other Notes**:
+  <details>
+    <summary><h3>Additional Files</h3></summary>
+    <ul>
+      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+    </ul>
+  </details>
+
+  </details>
+
+
+
+
 
   </body>
   </html>
