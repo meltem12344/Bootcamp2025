@@ -114,7 +114,12 @@
   <p>The target audience of this platform includes learners from high school to postgraduate levels who are seeking a more personalized and interactive learning experience beyond traditional, standardized education methods. It is also suitable for professionals aiming to reinforce their knowledge, as well as beginners who are curious and self-driven to explore new topics independently.</p>
   <p>The platform is especially designed for individuals with diverse cognitive styles—visual, auditory, and kinesthetic—by offering content selection based on learning preferences, voice-based explanation features, adaptive mini quizzes, and downloadable PDF summaries. These tools allow users to engage with the material at their own pace and in their preferred format.</p>
   <p>By providing accessible, customizable, and AI-powered learning tools, the platform appeals to a broad range of users who value flexible, personalized, and effective digital education experiences for both academic and personal growth.</p>
-
+  <details>
+    <summary><h3>Additional Files</h3></summary>
+    <ul>
+      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+    </ul>
+  </details>
 
    --- 
 
