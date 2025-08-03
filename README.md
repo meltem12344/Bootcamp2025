@@ -249,10 +249,10 @@
 
   <details>
     <summary><h1>Sprint 2</h1></summary>
-
-
+    
   <details>
     <summary><h3>Sprint 2 - Web page Screenshots</h3></summary>
+    
     <table style="width: 100%;">
       <tr>
         <td colspan="4" style="text-align: center;"><h2>Improved Version</h2></td>
@@ -311,6 +311,7 @@
 
   <details>
     <summary><h3>Sprint 2 - Sprint Board Update Screenshots</h3></summary>
+    
     <img src="bootcampFiles/sprintTwo/boardupdate/1.png" style="max-width: 100%; height: auto;">
     <img src="bootcampFiles/sprintTwo/boardupdate/2.png" style="max-width: 100%; height: auto;">
     <img src="bootcampFiles/sprintTwo/boardupdate/3.png" style="max-width: 100%; height: auto;">
@@ -333,6 +334,7 @@
      - Example corrections and detailed AI explanations were provided after user voice input
 
 - **Expected Point Completion within Sprint**: 240 points
+
 - **Point Completion Logic**:  
   The second sprint had a target of '240 points'.  
 
@@ -347,12 +349,14 @@
     - Voice Explanation + Feedback: AI correction after voice input (25 pts)
     - Fatigue Prediction (Start): Initial fatigue logic setup (10 pts)
     - Agentic AI Plan: Agent flow integration planning (10 pts)
+  
   > A total of '240 points' worth of work has been completed.
 
 
 - **Daily Scrum**:
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
+    
     <ul>
       <li> <a href="./bootcampFiles/sprintTwo/dailyScrum">See file</a></li>
     </ul>
@@ -395,6 +399,13 @@
     Motivational UI elements will also be planned as part of this feature.
 
 
+
+
+  <details>
+    <summary><h1>Sprint 1</h1></summary>
+
+
+  <details>
 
   </body>
   </html>
