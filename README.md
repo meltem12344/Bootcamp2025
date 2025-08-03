@@ -117,7 +117,7 @@
   <details>
     <summary><h3>Additional Files</h3></summary>
     <ul>
-      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.docx">See file</a></li>
     </ul>
   </details>
 
@@ -242,7 +242,7 @@
   <details>
     <summary><h3>Additional Files</h3></summary>
     <ul>
-      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
+      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.docx">See file</a></li>
     </ul>
   </details>
 
