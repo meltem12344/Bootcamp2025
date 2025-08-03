@@ -491,13 +491,6 @@
   
   - **Final remarks:**
     With Sprint 3, the development process has come to a close, and the product is ready for delivery. Key functionalities such as personalized learning content, AI-driven explanations, mini quizzes, and PDF export are fully integrated. While a few advanced features were not completed, they do not block core functionality and may be considered for future development.
-- **Other Notes**:
-  <details>
-    <summary><h3>Additional Files</h3></summary>
-    <ul>
-      <li><strong>Project Scope And Goals:</strong> <a href="./bootcampFiles/sprintOne/projectscopeandgoals.pdf">See file</a></li>
-    </ul>
-  </details>
 
   </details>
 
