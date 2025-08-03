@@ -71,7 +71,7 @@
 
 
   ## Product Description
-  This project is an AI-powered learning assistant developed as a web-based educational platform. Its main goal is to provide a personalized learning experience by analyzing students’ learning styles (visual, auditory, kinesthetic).
+  sophira is an AI-powered learning assistant developed as a web-based educational platform. Its main goal is to provide a personalized learning experience by analyzing students’ learning styles (visual, auditory, kinesthetic).
   Using the Gemini API, the system generates topic-specific explanations tailored to each student, provides real-time voice-based feedback, and evaluates knowledge through adaptive mini quizzes. Additionally, users can download filtered summaries of their learning process in PDF format.
   The platform is designed with a focus on accessibility, personalization, and efficiency. Its objective is to enhance learning outcomes and offer equal educational opportunities for every learner.
 
