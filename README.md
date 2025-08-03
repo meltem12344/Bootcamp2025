@@ -72,48 +72,45 @@
   The platform is designed with a focus on accessibility, personalization, and efficiency. Its objective is to enhance learning outcomes and offer equal educational opportunities for every learner.
 
 
-<details>
-  <summary><h2>Product Features</h2></summary>
-  <h3>Personalized Learning Experience:</h3>
+  ## Product Features
+
+
+  <b>Personalized Learning Experience:</b>
   <p>The platform dynamically adapts the teaching content based on each student’s learning style and personality traits, offering a truly individualized educational journey.</p>
   
-  <h3>AI-Powered Content Generation:</h3>
+  <b>AI-Powered Content Generation:</b>
   <p>Leveraging GPT-based AI, the system generates personalized explanations tailored to the student’s learning profile, increasing comprehension and engagement.</p>
   
-  <h3>Voice-Based Feedback:</h3>
+  <b>Voice-Based Feedback:</b>
   <p>Students can explain topics verbally using a microphone. The system analyzes their explanations and provides constructive feedback on misunderstood or missing parts.</p>
   
-  <h3>Adaptive Mini Quizzes:</h3>
+  <b>Adaptive Mini Quizzes:</b>
   <p>Mini quizzes are personalized to evaluate the student’s current knowledge level and adapt accordingly with detailed feedback, promoting active learning.</p>
   
-  <h3>Personalized Learning Booklet:</h3>
+  <b>Personalized Learning Booklet:</b>
   <p>At the end of each session or topic, students receive a downloadable PDF booklet summarizing what they’ve learned.</p>
   
-  <h3>Student-to-AI Interaction:</h3>
+  <b>Student-to-AI Interaction:</b>
   <p>The system supports conversational interaction with the AI, allowing students to ask questions, request clarifications, or explore topics in more depth, just like having a personal tutor.</p>
   
-  <h3>Secure Student Profiles:</h3>
+  <b>Secure Student Profiles:</b>
   <p>Each student has a secure profile storing their learning preferences, performance data, and progress, ensuring a consistent and safe learning experience across sessions.</p>
   
-  <h3>Multi-language Support:</h3>
+  <b>Multi-language Support:</b>
   <p>The platform is designed to be inclusive, supporting multiple languages so learners from different backgrounds can fully benefit from the personalized content.</p>
   
-  <h3>Style-Based Learning Modes:</h3>
+  <b>Style-Based Learning Modes:</b>
   <p>Students can choose or be assigned visual-heavy, audio-rich, or text-focused content delivery based on their cognitive preferences, improving retention and satisfaction.</p>
   
-  <h3>Teacher & Tutor Access:</h3>
+  <b>Teacher & Tutor Access:</b>
   <p>Private tutors and institutions can use the platform to better understand student needs and provide custom support based on detailed progress analytics.</p>
 
-</details>
 
- <details>
-    <summary><h2>Target Audience</h2></summary>
-    <p>The target audience of this platform includes learners from high school to postgraduate levels who are seeking a more personalized and interactive learning experience beyond traditional, standardized education methods. It is also suitable for professionals aiming to reinforce their knowledge, as well as beginners who are curious and self-driven to explore new topics independently.
+ ## Target Audience
+  <p>The target audience of this platform includes learners from high school to postgraduate levels who are seeking a more personalized and interactive learning experience beyond traditional, standardized education methods. It is also suitable for professionals aiming to reinforce their knowledge, as well as beginners who are curious and self-driven to explore new topics independently.</p>
+  <p>The platform is especially designed for individuals with diverse cognitive styles—visual, auditory, and kinesthetic—by offering content selection based on learning preferences, voice-based explanation features, adaptive mini quizzes, and downloadable PDF summaries. These tools allow users to engage with the material at their own pace and in their preferred format.</p>
+  <p>By providing accessible, customizable, and AI-powered learning tools, the platform appeals to a broad range of users who value flexible, personalized, and effective digital education experiences for both academic and personal growth.</p>
 
-The platform is especially designed for individuals with diverse cognitive styles—visual, auditory, and kinesthetic—by offering content selection based on learning preferences, voice-based explanation features, adaptive mini quizzes, and downloadable PDF summaries. These tools allow users to engage with the material at their own pace and in their preferred format.
-
-By providing accessible, customizable, and AI-powered learning tools, the platform appeals to a broad range of users who value flexible, personalized, and effective digital education experiences for both academic and personal growth.</p>
-  </details>
 
  
 
@@ -350,8 +347,9 @@ By providing accessible, customizable, and AI-powered learning tools, the platfo
     - Voice Explanation + Feedback: AI correction after voice input (25 pts)
     - Fatigue Prediction (Start): Initial fatigue logic setup (10 pts)
     - Agentic AI Plan: Agent flow integration planning (10 pts)
+  > A total of '240 points' worth of work has been completed.
 
-  > A total of '240 points' worth of work has been completed.  
+
 - **Daily Scrum**:
   <details>
     <summary><h2>Daily Scrum File</h2></summary>
